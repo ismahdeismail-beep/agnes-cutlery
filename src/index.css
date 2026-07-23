@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1E5631;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #287241;
+  --color-on-primary-container: #ffffff;
+  --color-primary-fixed: #a2f2b7;
+  --color-on-primary-fixed: #00210e;
+  --color-secondary: #D4AF37;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #f5de95;
+  --color-on-secondary-container: #3a2e00;
+  --color-secondary-fixed: #ffdf97;
+  --color-on-secondary-fixed: #251a00;
+  --color-background: #ffffff;
+  --color-on-background: #333333;
+  --color-surface: #ffffff;
+  --color-surface-dim: #f3f3f3;
+  --color-surface-bright: #ffffff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fafafa;
+  --color-surface-container: #f4f4f4;
+  --color-surface-container-high: #FFF8F0;
+  --color-surface-container-highest: #FDF1E3;
+  --color-on-surface: #333333;
+  --color-on-surface-variant: #555555;
+  --color-outline: #888888;
+  --color-outline-variant: #cccccc;
+  
+  --spacing-margin-desktop: 64px;
+  --spacing-margin-mobile: 20px;
+  --spacing-container-max: 1280px;
+
+  --font-display-lg: "Playfair Display", serif;
+  --font-display-lg-mobile: "Playfair Display", serif;
+  --font-headline-md: "Playfair Display", serif;
+  --font-headline-sm: "Playfair Display", serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-label-caps: "Inter", sans-serif;
+
+  --text-display-lg: 64px;
+  --text-display-lg--line-height: 72px;
+  --text-display-lg-mobile: 40px;
+  --text-display-lg-mobile--line-height: 48px;
+  --text-headline-md: 32px;
+  --text-headline-md--line-height: 40px;
+  --text-headline-sm: 24px;
+  --text-headline-sm--line-height: 32px;
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-label-caps: 12px;
+  --text-label-caps--line-height: 16px;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-on-surface);
+    font-family: var(--font-body-md);
+    min-height: max(884px, 100dvh);
+    overflow-x: hidden;
+  }
+}
+
+.leader-line {
+  flex-grow: 1;
+  border-bottom: 1px dotted var(--color-outline-variant);
+  margin: 0 12px;
+  position: relative;
+  top: -4px;
+}
+
+.glass-nav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-card {
+  background: rgba(252, 249, 248, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(113, 121, 112, 0.1);
+}
+
+.ambient-shadow {
+  box-shadow: 0 24px 48px -12px rgba(0, 62, 28, 0.08);
+}
