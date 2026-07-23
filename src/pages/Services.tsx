@@ -2,66 +2,77 @@ import React from 'react';
 import { Building2, Heart, UtensilsCrossed, TreePine, GraduationCap, Baby, PartyPopper, Cake, ClipboardList, CheckCircle2, QrCode } from 'lucide-react';
 import SEO from '../components/SEO';
 
+import sImg1 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.57 AM.jpeg';
+import sImg2 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.08 AM.jpeg';
+import sImg3 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.06 AM.jpeg';
+import sImg4 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.07 AM.jpeg';
+import sImg5 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.58 AM.jpeg';
+import sImg6 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.04 AM.jpeg';
+import sImg7 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.56 AM.jpeg';
+import sImg8 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM.jpeg';
+import sImg9 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.55 AM.jpeg';
+import sImg10 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.05 AM.jpeg';
+
 const servicesList = [
   {
     icon: Building2,
     title: 'Corporate Catering',
-    desc: 'Impress your clients and nourish your team with refined menus designed for boardrooms, product launches, and conferences.',
-    img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop'
+    desc: 'Impress your clients and nourish your team with refined boardroom menus and executive presentation.',
+    img: sImg1
   },
   {
     icon: Heart,
     title: 'Wedding Catering',
-    desc: 'Whether a traditional Ruracio or a modern white wedding, your special day deserves a bespoke culinary journey crafted just for you.',
-    img: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop'
+    desc: 'Whether a traditional Ruracio or a modern white wedding, your special day deserves a bespoke culinary journey.',
+    img: sImg2
   },
   {
     icon: Cake,
     title: 'Birthday Parties',
-    desc: 'From kids parties to milestone adult birthdays and family gatherings, we create fun, delicious, and memorable dining experiences.',
-    img: 'https://images.unsplash.com/photo-1530103862676-de8892795460?q=80&w=2070&auto=format&fit=crop'
+    desc: 'From kids parties to milestone adult birthdays and family gatherings, we create fun, delicious dining experiences.',
+    img: sImg3
   },
   {
     icon: GraduationCap,
     title: 'Graduation Ceremonies',
-    desc: 'Celebrate academic achievements with family and friends through our premium outdoor setups and extensive buffet options.',
-    img: 'https://images.unsplash.com/photo-1523580494112-071d384e236c?q=80&w=2070&auto=format&fit=crop'
+    desc: 'Celebrate academic achievements with family and friends through premium outdoor setups and extensive buffets.',
+    img: sImg4
   },
   {
     icon: Baby,
     title: 'Baby Shower',
     desc: 'Elegant buffets, coordinated decorations, and sweet desserts to celebrate the upcoming arrival in style.',
-    img: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070&auto=format&fit=crop'
+    img: sImg5
   },
   {
     icon: PartyPopper,
     title: 'Bridal Shower',
     desc: 'Sophisticated meals, artisanal cocktails, and delightful desserts perfect for an elegant bridal shower celebration.',
-    img: 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=2070&auto=format&fit=crop'
+    img: sImg6
   },
   {
     icon: UtensilsCrossed,
     title: 'Private Chef',
-    desc: 'The ultimate luxury: a professional Agnes chef in your own home or vacation rental, delivering a restaurant-grade experience.',
-    img: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=1977&auto=format&fit=crop'
+    desc: 'The ultimate luxury: a professional Agnes chef in your own home or vacation rental, delivering restaurant-grade meals.',
+    img: sImg7
   },
   {
     icon: TreePine,
     title: 'Outdoor Catering',
     desc: 'Expertly managed catering for garden parties, picnics, and outdoor events, bringing the kitchen to nature.',
-    img: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=2070&auto=format&fit=crop'
+    img: sImg8
   },
   {
-    icon: UtensilsCrossed, // Reusing icon for Buffet
+    icon: UtensilsCrossed,
     title: 'Buffet Services',
     desc: 'Extensive spreads featuring traditional Kenyan meals, international cuisine, and interactive live cooking stations.',
-    img: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=1913&auto=format&fit=crop'
+    img: sImg9
   },
   {
     icon: ClipboardList,
     title: 'Event Planning Support',
     desc: 'Comprehensive support including food planning, professional serving staff, equipment sourcing, and menu consultation.',
-    img: 'https://images.unsplash.com/photo-1505362833258-f9b84ab309cb?q=80&w=2070&auto=format&fit=crop'
+    img: sImg10
   }
 ];
 
