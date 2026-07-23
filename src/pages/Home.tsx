@@ -5,6 +5,11 @@ import Testimonials from '../components/Testimonials';
 import HeroCarousel from '../components/HeroCarousel';
 import SEO from '../components/SEO';
 
+import featImg1 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.57 AM.jpeg';
+import featImg2 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.08 AM.jpeg';
+import featImg3 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.56 AM.jpeg';
+import featImg4 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM.jpeg';
+
 const whyChooseUs = [
   { icon: Users, title: 'Experienced Team', desc: 'Over a decade of culinary excellence and flawless event execution.' },
   { icon: Utensils, title: 'Fresh Ingredients', desc: 'Locally sourced, organic produce ensuring premium taste and quality.' },
@@ -18,22 +23,22 @@ const featuredServices = [
   {
     title: 'Corporate Catering',
     desc: 'Impress your clients and nourish your team with refined boardroom menus.',
-    img: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=1913&auto=format&fit=crop'
+    img: featImg1
   },
   {
     title: 'Wedding Catering',
     desc: 'Unforgettable culinary experiences for your special day, from Ruracios to modern receptions.',
-    img: 'https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2070&auto=format&fit=crop'
+    img: featImg2
   },
   {
     title: 'Private Chef',
     desc: 'Restaurant-grade fine dining in the intimacy of your own home.',
-    img: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=1977&auto=format&fit=crop'
+    img: featImg3
   },
   {
     title: 'Outdoor Catering',
     desc: 'Premium buffet and live station setups for garden parties and outdoor events.',
-    img: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=2070&auto=format&fit=crop'
+    img: featImg4
   }
 ];
 
@@ -126,10 +131,10 @@ export default function Home() {
           <h2 className="text-headline-md text-primary mb-12">A Taste of Our Events</h2>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-            <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2070&auto=format&fit=crop" alt="Gallery 1" className="rounded-xl w-full h-48 object-cover hover:opacity-80 transition-opacity cursor-pointer" />
-            <img src="https://images.unsplash.com/photo-1555244162-803834f87a41?q=80&w=2070&auto=format&fit=crop" alt="Gallery 2" className="rounded-xl w-full h-48 object-cover hover:opacity-80 transition-opacity cursor-pointer" />
-            <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=2070&auto=format&fit=crop" alt="Gallery 3" className="rounded-xl w-full h-48 object-cover hover:opacity-80 transition-opacity cursor-pointer hidden md:block" />
-            <img src="https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?q=80&w=2070&auto=format&fit=crop" alt="Gallery 4" className="rounded-xl w-full h-48 object-cover hover:opacity-80 transition-opacity cursor-pointer hidden md:block" />
+            <img src={featImg2} alt="Gallery 1" className="rounded-xl w-full h-48 object-cover hover:opacity-80 transition-opacity cursor-pointer" />
+            <img src={featImg1} alt="Gallery 2" className="rounded-xl w-full h-48 object-cover hover:opacity-80 transition-opacity cursor-pointer" />
+            <img src={featImg4} alt="Gallery 3" className="rounded-xl w-full h-48 object-cover hover:opacity-80 transition-opacity cursor-pointer hidden md:block" />
+            <img src={featImg3} alt="Gallery 4" className="rounded-xl w-full h-48 object-cover hover:opacity-80 transition-opacity cursor-pointer hidden md:block" />
           </div>
           
           <Link to="/gallery" className="text-primary font-label-caps hover:text-secondary transition-colors underline underline-offset-4">

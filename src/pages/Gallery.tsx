@@ -3,17 +3,48 @@ import { cn } from '../lib/utils';
 import { QrCode } from 'lucide-react';
 import SEO from '../components/SEO';
 
+import img1 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM.jpeg';
+import img2 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM (1).jpeg';
+import img3 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM (2).jpeg';
+import img4 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.55 AM.jpeg';
+import img5 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.55 AM (1).jpeg';
+import img6 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.55 AM (2).jpeg';
+import img7 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.55 AM (3).jpeg';
+import img8 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.56 AM.jpeg';
+import img9 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.57 AM.jpeg';
+import img10 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.58 AM.jpeg';
+import img11 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.59 AM.jpeg';
+import img12 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.01 AM.jpeg';
+import img13 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.02 AM.jpeg';
+import img14 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.04 AM.jpeg';
+import img15 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.05 AM.jpeg';
+import img16 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.06 AM.jpeg';
+import img17 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.06 AM (1).jpeg';
+import img18 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.07 AM.jpeg';
+import img19 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.08 AM.jpeg';
+
 const categories = ['All', 'Wedding', 'Corporate', 'Private Chef', 'Buffet'];
 
 const images = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2070&auto=format&fit=crop', category: 'Wedding', alt: 'Elegant wedding table setup' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=1913&auto=format&fit=crop', category: 'Corporate', alt: 'Corporate buffet catering' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=1977&auto=format&fit=crop', category: 'Private Chef', alt: 'Private chef preparing meal' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1555244162-803834f87a41?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Gourmet buffet spread' },
-  { id: 5, src: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=2070&auto=format&fit=crop', category: 'Corporate', alt: 'Breakfast pastry selection' },
-  { id: 6, src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop', category: 'Wedding', alt: 'Wedding reception dining' },
-  { id: 7, src: 'https://images.unsplash.com/photo-1544025162-81111420d4d9?q=80&w=1976&auto=format&fit=crop', category: 'Buffet', alt: 'Traditional Kenyan dishes' },
-  { id: 8, src: 'https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?q=80&w=2070&auto=format&fit=crop', category: 'Private Chef', alt: 'Roasted chicken main course' },
+  { id: 1, src: img1, category: 'Buffet', alt: 'Gourmet Chicken Casserole Spread' },
+  { id: 2, src: img2, category: 'Wedding', alt: 'Artisanal Garlic Naan & Bread Selection' },
+  { id: 3, src: img3, category: 'Wedding', alt: 'Freshly Baked Flatbread Station' },
+  { id: 4, src: img4, category: 'Private Chef', alt: 'Live Stir-Fry & Chef Station' },
+  { id: 5, src: img5, category: 'Buffet', alt: 'Pan-Seared Herb Fish with Lemon' },
+  { id: 6, src: img6, category: 'Corporate', alt: 'Creamy Eggplant & Vegetable Curry' },
+  { id: 7, src: img7, category: 'Wedding', alt: 'Signature Roasted Meat & Bone Marrow Choma' },
+  { id: 8, src: img8, category: 'Buffet', alt: 'Decadent Swiss Rolls & Dessert Spreads' },
+  { id: 9, src: img9, category: 'Corporate', alt: 'Fresh Salad & Organic Vegetable Bar' },
+  { id: 10, src: img10, category: 'Buffet', alt: 'Artisan Wood-Fired Pizza Station' },
+  { id: 11, src: img11, category: 'Wedding', alt: 'Exquisite Wedding Reception Setup' },
+  { id: 12, src: img12, category: 'Private Chef', alt: 'Private Dining Fine Cuisines' },
+  { id: 13, src: img13, category: 'Corporate', alt: 'Executive Boardroom Catering' },
+  { id: 14, src: img14, category: 'Buffet', alt: 'Traditional Kenyan Heritage Buffet' },
+  { id: 15, src: img15, category: 'Wedding', alt: 'Grand Wedding Celebration Banquet' },
+  { id: 16, src: img16, category: 'Private Chef', alt: 'Intimate Home Dining Experience' },
+  { id: 17, src: img17, category: 'Corporate', alt: 'Corporate Gala & Live Cooking' },
+  { id: 18, src: img18, category: 'Buffet', alt: 'Gourmet Platters & Salads' },
+  { id: 19, src: img19, category: 'Wedding', alt: 'Luxury Wedding Table Styling' },
 ];
 
 export default function Gallery() {

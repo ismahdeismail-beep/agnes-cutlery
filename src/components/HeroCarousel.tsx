@@ -3,31 +3,36 @@ import { motion, AnimatePresence } from 'motion/react';
 import { QrCode } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+import slide1Img from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.06 AM.jpeg';
+import slide2Img from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM.jpeg';
+import slide3Img from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM (1).jpeg';
+import slide4Img from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.56 AM.jpeg';
+
 const slides = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1555244162-803834f87a41?q=80&w=2070&auto=format&fit=crop',
+    image: slide1Img,
     title: 'Authentic Taste.',
     subtitle: 'Heritage Reimagined.',
     description: 'Experience the finest Kenyan culinary traditions with a modern touch. From premium Nyama Choma to authentic coastal Pilau, we celebrate Nairobi\'s vibrant food culture in every plate.',
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1544025162-81111420d4d9?q=80&w=1976&auto=format&fit=crop',
+    image: slide2Img,
     title: 'Culinary Artistry.',
     subtitle: 'Locally Sourced.',
     description: 'Our dishes are crafted from the freshest seasonal ingredients sourced from local Kenyan farms, ensuring every bite tells a story of our land.',
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop',
+    image: slide3Img,
     title: 'Elegant Dining.',
     subtitle: 'Unforgettable Events.',
     description: 'Whether an intimate private dinner or a grand corporate gala, we provide impeccable service and bespoke menus tailored to your event.',
   },
   {
     id: 4,
-    image: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=1977&auto=format&fit=crop',
+    image: slide4Img,
     title: 'Private Chefs.',
     subtitle: 'Exquisite Service.',
     description: 'Bring the luxury of a fine-dining restaurant to your own home with our professional private chef services in Nairobi and its environs.',
