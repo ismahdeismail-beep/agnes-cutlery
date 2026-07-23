@@ -1,36 +1,36 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #1E5631;
+  --color-primary: #143A20;
   --color-on-primary: #ffffff;
-  --color-primary-container: #287241;
+  --color-primary-container: #1E5631;
   --color-on-primary-container: #ffffff;
-  --color-primary-fixed: #a2f2b7;
-  --color-on-primary-fixed: #00210e;
-  --color-secondary: #D4AF37;
+  --color-primary-fixed: #9BF2B2;
+  --color-on-primary-fixed: #00210b;
+  --color-secondary: #B8860B;
   --color-on-secondary: #ffffff;
-  --color-secondary-container: #f5de95;
-  --color-on-secondary-container: #3a2e00;
-  --color-secondary-fixed: #ffdf97;
+  --color-secondary-container: #FDF3D0;
+  --color-on-secondary-container: #2A1F00;
+  --color-secondary-fixed: #FFDF97;
   --color-on-secondary-fixed: #251a00;
-  --color-tertiary: #C85C1E;
+  --color-tertiary: #A04000;
   --color-on-tertiary: #ffffff;
-  --color-tertiary-container: #ffdbc9;
-  --color-on-tertiary-container: #3d1a00;
-  --color-background: #FAFAF8;
-  --color-on-background: #1C1C1C;
+  --color-tertiary-container: #FFE5D4;
+  --color-on-tertiary-container: #3D1500;
+  --color-background: #F8F7F4;
+  --color-on-background: #121212;
   --color-surface: #ffffff;
-  --color-surface-dim: #F0EFEB;
+  --color-surface-dim: #EAE6DF;
   --color-surface-bright: #ffffff;
   --color-surface-container-lowest: #ffffff;
-  --color-surface-container-low: #FAFAF8;
-  --color-surface-container: #F5F4F0;
-  --color-surface-container-high: #FFF8F0;
-  --color-surface-container-highest: #FDF1E3;
-  --color-on-surface: #1C1C1C;
-  --color-on-surface-variant: #4A4A4A;
-  --color-outline: #888888;
-  --color-outline-variant: #C4C4C4;
+  --color-surface-container-low: #F3F1EC;
+  --color-surface-container: #ECE8E1;
+  --color-surface-container-high: #FFF5E6;
+  --color-surface-container-highest: #FCE8CC;
+  --color-on-surface: #121212;
+  --color-on-surface-variant: #333333;
+  --color-outline: #555555;
+  --color-outline-variant: #A0A0A0;
   
   --spacing-margin-desktop: 64px;
   --spacing-margin-mobile: 20px;
@@ -78,30 +78,30 @@
   top: -4px;
 }
 
-/* Enhanced Glassmorphism with smooth backdrop blur */
+/* Enhanced Glassmorphism with high contrast backdrop blur */
 .glass-nav {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  background: rgba(255, 255, 255, 0.92);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(184, 134, 11, 0.3);
 }
 
 .glass-panel {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(30, 86, 49, 0.18);
+  border: 1px solid rgba(20, 58, 32, 0.2);
 }
 
 .ambient-shadow {
-  box-shadow: 0 24px 48px -12px rgba(30, 86, 49, 0.15);
+  box-shadow: 0 24px 48px -12px rgba(20, 58, 32, 0.18);
 }
 
 /* Live movement and floating pulse keyframes */
@@ -111,8 +111,8 @@
 }
 
 @keyframes pulseGlow {
-  0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.4)); }
-  50% { opacity: 1; filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.8)); }
+  0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 15px rgba(184, 134, 11, 0.5)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 25px rgba(184, 134, 11, 0.9)); }
 }
 
 .animate-float {
@@ -130,7 +130,7 @@
   }
 }
 
-/* Color utility classes for consistent theming */
+/* High contrast color utility classes */
 .text-primary { color: var(--color-primary); }
 .text-on-primary { color: var(--color-on-primary); }
 .text-secondary { color: var(--color-secondary); }

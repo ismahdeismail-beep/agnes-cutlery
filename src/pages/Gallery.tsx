@@ -45,6 +45,13 @@ const images = [
   { id: 17, src: img17, category: 'Corporate', alt: 'Corporate Gala & Live Cooking' },
   { id: 18, src: img18, category: 'Buffet', alt: 'Gourmet Platters & Salads' },
   { id: 19, src: img19, category: 'Wedding', alt: 'Luxury Wedding Table Styling' },
+  { id: 20, src: 'https://images.unsplash.com/photo-1555244162-803834f87a41?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Swahili Pilau & Coconut Rice Spread' },
+  { id: 21, src: 'https://images.unsplash.com/photo-1544025162-81111420d4d9?q=80&w=1976&auto=format&fit=crop', category: 'Wedding', alt: 'Traditional Ruracio Feast Presentation' },
+  { id: 22, src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop', category: 'Corporate', alt: 'Executive Luncheon & Plated Service' },
+  { id: 23, src: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=1977&auto=format&fit=crop', category: 'Private Chef', alt: 'Master Chef Preparing Flame-Kissed Steak' },
+  { id: 24, src: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Garden Party Live Barbecue Station' },
+  { id: 25, src: 'https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?q=80&w=2070&auto=format&fit=crop', category: 'Wedding', alt: 'Golden Roasted Herb Chicken Platter' },
+  { id: 26, src: 'https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Tropical Coastal Fruit & Dessert Bar' },
 ];
 
 export default function Gallery() {
