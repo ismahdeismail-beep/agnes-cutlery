@@ -3,6 +3,10 @@ import { Sparkles, PartyPopper, Gem, Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
+import wImg1 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.08 AM.jpeg';
+import wImg2 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM.jpeg';
+import wImg3 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.56 AM.jpeg';
+
 export default function Weddings() {
   return (
     <div className="pt-0">
@@ -13,7 +17,7 @@ export default function Weddings() {
       {/* Hero Section */}
       <header className="relative h-[795px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="w-full h-full bg-cover bg-center scale-105 transition-transform duration-[10s] hover:scale-100" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop')` }}></div>
+          <div className="w-full h-full bg-cover bg-center scale-105 transition-transform duration-[10s] hover:scale-100" style={{ backgroundImage: `url('${wImg1}')` }}></div>
           <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background"></div>
         </div>

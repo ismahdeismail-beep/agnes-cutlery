@@ -10,7 +10,7 @@ import sImg5 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.58 AM.jpe
 import sImg6 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.04 AM.jpeg';
 import sImg7 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.56 AM.jpeg';
 import sImg8 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM.jpeg';
-import sImg9 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.55 AM.jpeg';
+import sImg9 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.55 AM (1).jpeg';
 import sImg10 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.05 AM.jpeg';
 
 const servicesList = [
@@ -66,7 +66,7 @@ const servicesList = [
     icon: UtensilsCrossed,
     title: 'Buffet Services',
     desc: 'Extensive spreads featuring traditional Kenyan meals, international cuisine, and interactive live cooking stations.',
-    img: sImg9
+    img: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=1913&auto=format&fit=crop'
   },
   {
     icon: ClipboardList,
@@ -142,7 +142,7 @@ export default function Services() {
           <a href="https://wa.me/254797453969?text=Hello%20Agnes%20Catering%2C%20I%20would%20like%20to%20start%20planning%20my%20event." target="_blank" rel="noreferrer" className="mt-12 bg-primary text-on-primary px-10 py-4 rounded-lg text-label-caps hover:bg-primary-container transition-all inline-block">Start Planning Your Event</a>
         </div>
         <div className="md:col-span-5 md:-ml-20 h-[600px] w-full hidden md:block">
-          <div className="bg-cover bg-center w-full h-full shadow-2xl" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2070&auto=format&fit=crop')` }}></div>
+          <div className="bg-cover bg-center w-full h-full shadow-2xl" style={{ backgroundImage: `url('${sImg1}')` }}></div>
         </div>
       </section>
     </div>

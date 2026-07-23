@@ -29,12 +29,14 @@ const menuData: MenuItem[] = [
     name: 'Signature Nyama Choma',
     description: 'Prime roast meat (goat or beef), marinated in local herbs, served with kachumbari.',
     category: 'Traditional Kenyan',
+    image: 'https://images.unsplash.com/photo-1544025162-81111420d4d9?q=80&w=1976&auto=format&fit=crop',
   },
   {
     id: 'tk3',
     name: 'Mukimo & Stew',
     description: 'Traditional mashed green peas, potatoes, and corn, served with rich beef stew.',
     category: 'Traditional Kenyan',
+    image: 'https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2070&auto=format&fit=crop',
     tag: 'Authentic'
   },
   {
@@ -42,19 +44,36 @@ const menuData: MenuItem[] = [
     name: 'Soft Layered Chapati',
     description: 'Flaky, buttery chapatis served with your choice of savory stews or vegetables.',
     category: 'Traditional Kenyan',
+    image: 'https://images.unsplash.com/photo-1555244162-803834f87a41?q=80&w=2070&auto=format&fit=crop',
   },
   {
     id: 'tk5',
     name: 'Coastal Biryani',
     description: 'Rich, spiced rice dish cooked with tender chicken or beef in a thick, flavorful sauce.',
     category: 'Traditional Kenyan',
+    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop',
   },
   {
     id: 'tk6',
     name: 'Ugali & Sukuma Wiki',
     description: 'Classic cornmeal mash served with sautéed collard greens and tender braised beef.',
     category: 'Traditional Kenyan',
-    image: 'https://images.unsplash.com/photo-1544025162-81111420d4d9?q=80&w=1976&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=2070&auto=format&fit=crop',
+  },
+  {
+    id: 'tk7',
+    name: 'Samaki Wa Kupaka',
+    description: 'Grilled whole fish marinated in coconut-curry sauce, a coastal Swahili delicacy.',
+    category: 'Traditional Kenyan',
+    image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=2070&auto=format&fit=crop',
+    tag: 'Coastal Special'
+  },
+  {
+    id: 'tk8',
+    name: 'Kienyeji Chicken Stew',
+    description: 'Free-range chicken slow-cooked with traditional herbs and vegetables.',
+    category: 'Traditional Kenyan',
+    image: 'https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?q=80&w=2070&auto=format&fit=crop',
   },
 
   // International
@@ -71,18 +90,21 @@ const menuData: MenuItem[] = [
     name: 'Gourmet Pasta & Seafood',
     description: 'Linguine tossed with fresh seafood in a light garlic, white wine, and herb sauce.',
     category: 'International',
+    image: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=1977&auto=format&fit=crop',
   },
   {
     id: 'i3',
     name: 'Premium BBQ Ribs',
     description: 'Slow-cooked ribs basted in a smoky barbecue sauce, served with artisan salads.',
     category: 'International',
+    image: 'https://images.unsplash.com/photo-1544025162-81111420d4d9?q=80&w=1976&auto=format&fit=crop',
   },
   {
     id: 'i4',
     name: 'Artisan Wood-Fired Pizza',
     description: 'Hand-tossed crust with gourmet toppings, baked to perfection.',
     category: 'International',
+    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop',
   },
 
   // Breakfast
@@ -99,14 +121,24 @@ const menuData: MenuItem[] = [
     name: 'Fluffy Pancakes & Syrups',
     description: 'Stack of buttermilk pancakes served with assorted syrups and fresh berries.',
     category: 'Breakfast',
+    image: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?q=80&w=2070&auto=format&fit=crop',
   },
   {
     id: 'b3',
     name: 'Full English Setup',
     description: 'Eggs, premium sausages, baked beans, grilled tomatoes, and toast.',
     category: 'Breakfast',
+    image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=2070&auto=format&fit=crop',
   },
-  
+  {
+    id: 'b4',
+    name: 'Mahamri & Chai',
+    description: 'Sweet coconut cardamom doughnuts paired with spiced Kenyan masala tea.',
+    category: 'Breakfast',
+    image: 'https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2070&auto=format&fit=crop',
+    tag: 'Swahili Morning'
+  },
+
   // Desserts
   {
     id: 'd1',
@@ -120,13 +152,23 @@ const menuData: MenuItem[] = [
     name: 'Decadent Chocolate Cake',
     description: 'Rich, moist chocolate cake with dark chocolate ganache.',
     category: 'Desserts',
+    image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=2070&auto=format&fit=crop',
     tag: 'Sweet'
   },
   {
     id: 'd3',
     name: 'Artisan Cupcakes & Cookies',
     description: 'An assortment of freshly baked, beautifully decorated sweet treats.',
-    category: 'Desserts'
+    category: 'Desserts',
+    image: 'https://images.unsplash.com/photo-1586985289071-0d81f4c8651d?q=80&w=2070&auto=format&fit=crop'
+  },
+  {
+    id: 'd4',
+    name: 'Kashata & Coconut Sweets',
+    description: 'Traditional Swahili peanut and coconut confections with cardamom.',
+    category: 'Desserts',
+    image: 'https://images.unsplash.com/photo-1555244162-803834f87a41?q=80&w=2070&auto=format&fit=crop',
+    tag: 'Heritage'
   },
 
   // Drinks
@@ -135,12 +177,14 @@ const menuData: MenuItem[] = [
     name: 'Freshly Squeezed Juices',
     description: 'Orange, passion fruit, mango, and mixed tropical blends.',
     category: 'Drinks',
+    image: 'https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=2070&auto=format&fit=crop',
   },
   {
     id: 'dr2',
     name: 'Signature Mocktails',
     description: 'Refreshing non-alcoholic mixed drinks crafted with fresh herbs and fruit.',
     category: 'Drinks',
+    image: 'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?q=80&w=2070&auto=format&fit=crop',
     tag: 'Refreshing'
   },
   {
@@ -148,6 +192,15 @@ const menuData: MenuItem[] = [
     name: 'Premium Coffee & Tea Station',
     description: 'Kenyan AA coffee, masala tea, and assorted herbal infusions.',
     category: 'Drinks',
+    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070&auto=format&fit=crop',
+  },
+  {
+    id: 'dr4',
+    name: 'Dawa & Tamarind Cooler',
+    description: 'Classic Kenyan honey-lime-ginger cocktail and sweet tamarind refresher.',
+    category: 'Drinks',
+    image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=2070&auto=format&fit=crop',
+    tag: 'Local Favorite'
   }
 ];
 

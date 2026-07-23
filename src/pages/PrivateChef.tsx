@@ -3,6 +3,11 @@ import { BookOpen, Leaf, ConciergeBell } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
+import pcImg1 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.56 AM.jpeg';
+import pcImg2 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM.jpeg';
+import pcImg3 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.08 AM.jpeg';
+import pcImg4 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.06 AM.jpeg';
+
 export default function PrivateChef() {
   return (
     <div className="pt-20">
@@ -13,7 +18,7 @@ export default function PrivateChef() {
       {/* Hero Section */}
       <section className="relative min-h-[795px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="w-full h-full bg-cover bg-center transition-transform duration-1000 hover:scale-105" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=1977&auto=format&fit=crop')` }}>
+          <div className="w-full h-full bg-cover bg-center transition-transform duration-1000 hover:scale-105" style={{ backgroundImage: `url('${pcImg1}')` }}>
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
         </div>
@@ -36,7 +41,7 @@ export default function PrivateChef() {
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div className="relative">
-              <div className="aspect-[4/5] bg-cover bg-center rounded-lg ambient-shadow" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop')` }}>
+              <div className="aspect-[4/5] bg-cover bg-center rounded-lg ambient-shadow" style={{ backgroundImage: `url('${pcImg2}')` }}>
               </div>
               <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-primary-fixed p-8 hidden md:flex items-center justify-center rounded-lg">
                 <p className="text-headline-sm text-on-primary-fixed text-center leading-tight">Since 1984</p>
@@ -83,13 +88,13 @@ export default function PrivateChef() {
           
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
             <div className="md:col-span-8 relative group overflow-hidden rounded-lg min-h-[300px]">
-              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2070&auto=format&fit=crop')` }}></div>
+              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: `url('${pcImg3}')` }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-10">
                 <h3 className="text-headline-sm text-white">Romantic Dinners</h3>
               </div>
             </div>
             <div className="md:col-span-4 relative group overflow-hidden rounded-lg min-h-[300px]">
-              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop')` }}></div>
+              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: `url('${pcImg4}')` }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-10">
                 <h3 className="text-headline-sm text-white">Family Gatherings</h3>
               </div>
