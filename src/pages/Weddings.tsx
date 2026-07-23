@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sparkles, PartyPopper, Gem, Check } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
 export default function Weddings() {
@@ -23,8 +24,8 @@ export default function Weddings() {
             Exquisite Weddings, <br/><span className="italic font-normal">Timeless Flavors</span>
           </h1>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-primary text-white px-10 py-4 text-label-caps rounded hover:bg-primary-container transition-all duration-300">Explore Collections</button>
-            <button className="border border-secondary-fixed text-white px-10 py-4 text-label-caps rounded hover:bg-secondary-fixed/10 transition-all duration-300">View Gallery</button>
+            <a href="#collections" className="bg-primary text-white px-10 py-4 text-label-caps rounded hover:bg-primary-container transition-all duration-300 text-center">Explore Collections</a>
+            <Link to="/gallery" className="border border-secondary-fixed text-white px-10 py-4 text-label-caps rounded hover:bg-secondary-fixed/10 transition-all duration-300 text-center">View Gallery</Link>
           </div>
         </div>
       </header>

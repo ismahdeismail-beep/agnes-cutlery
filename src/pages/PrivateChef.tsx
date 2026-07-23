@@ -1,5 +1,6 @@
 import React from 'react';
 import { BookOpen, Leaf, ConciergeBell } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
 export default function PrivateChef() {
@@ -24,7 +25,7 @@ export default function PrivateChef() {
             <p className="text-body-lg text-on-surface-variant mb-10 max-w-lg">Bespoke fine dining, curated specifically for the intimacy of your home in Nairobi and its environs. Experience restaurant-grade excellence without leaving your sanctuary.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="https://wa.me/254797453969?text=Hello%20Agnes%20Catering%2C%20I%20am%20interested%20in%20hiring%20a%20Private%20Chef." target="_blank" rel="noreferrer" className="bg-primary text-on-primary px-10 py-5 rounded text-label-caps uppercase tracking-widest hover:bg-primary-container transition-all shadow-lg inline-block text-center">Hire Your Private Chef</a>
-              <button className="border border-secondary text-primary px-10 py-5 rounded text-label-caps uppercase tracking-widest hover:bg-secondary-fixed/10 transition-all">View Sample Menus</button>
+              <Link to="/menu" className="border border-secondary text-primary px-10 py-5 rounded text-label-caps uppercase tracking-widest hover:bg-secondary-fixed/10 transition-all text-center">View Sample Menus</Link>
             </div>
           </div>
         </div>
