@@ -15,7 +15,7 @@ interface MenuItem {
 }
 
 const menuData: MenuItem[] = [
-  // Traditional Kenyan
+  // ─── Traditional Kenyan ───────────────────────────────────────────
   {
     id: 'tk1',
     name: 'Swahili Pilau Heritage',
@@ -27,9 +27,10 @@ const menuData: MenuItem[] = [
   {
     id: 'tk2',
     name: 'Signature Nyama Choma',
-    description: 'Prime roast meat (goat or beef), marinated in local herbs, served with kachumbari.',
+    description: 'Prime roast meat (goat or beef), marinated in local herbs, served with kachumbari and ugali.',
     category: 'Traditional Kenyan',
     image: 'https://images.unsplash.com/photo-1544025162-81111420d4d9?q=80&w=1976&auto=format&fit=crop',
+    tag: 'Iconic'
   },
   {
     id: 'tk3',
@@ -75,8 +76,45 @@ const menuData: MenuItem[] = [
     category: 'Traditional Kenyan',
     image: 'https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?q=80&w=2070&auto=format&fit=crop',
   },
+  {
+    id: 'tk9',
+    name: 'Irio',
+    description: 'Kikuyu classic: mashed green peas, potatoes, and corn kernels — a hearty, comforting staple.',
+    category: 'Traditional Kenyan',
+    image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=2070&auto=format&fit=crop',
+    tag: 'Heritage'
+  },
+  {
+    id: 'tk10',
+    name: 'Githeri',
+    description: 'Hearty mix of boiled maize and beans simmered with onions, tomatoes, and aromatic spices.',
+    category: 'Traditional Kenyan',
+    image: 'https://images.unsplash.com/photo-1515516969-d4008cc6241a?q=80&w=2070&auto=format&fit=crop',
+  },
+  {
+    id: 'tk11',
+    name: 'Wali wa Nazi',
+    description: 'Coconut-infused rice, a beloved coastal side dish paired with curries and grilled meats.',
+    category: 'Traditional Kenyan',
+    image: 'https://images.unsplash.com/photo-1516684732162-798a0062be99?q=80&w=2070&auto=format&fit=crop',
+  },
+  {
+    id: 'tk12',
+    name: 'Mchuzi wa Nyama',
+    description: 'Slow-simmered beef curry in a rich, tomato-based sauce with coconut and traditional spices.',
+    category: 'Traditional Kenyan',
+    image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=2070&auto=format&fit=crop',
+    tag: 'Spiced'
+  },
+  {
+    id: 'tk13',
+    name: 'Matoke',
+    description: 'Steamed green bananas in a savory onion and tomato stew — a beloved Eastern Kenya dish.',
+    category: 'Traditional Kenyan',
+    image: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=2070&auto=format&fit=crop',
+  },
 
-  // International
+  // ─── International ────────────────────────────────────────────────
   {
     id: 'i1',
     name: 'Rosemary Roast Chicken',
@@ -107,7 +145,7 @@ const menuData: MenuItem[] = [
     image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=2069&auto=format&fit=crop',
   },
 
-  // Breakfast
+  // ─── Breakfast ────────────────────────────────────────────────────
   {
     id: 'b1',
     name: 'Swahili Cardamom Mandazi',
@@ -139,18 +177,19 @@ const menuData: MenuItem[] = [
     tag: 'Swahili Morning'
   },
 
-  // Desserts
+  // ─── Desserts (PHOTOS FIXED) ──────────────────────────────────────
   {
     id: 'd1',
     name: 'Tropical Fruit Platter',
-    description: 'A vibrant selection of seasonal Kenyan coastal fruits.',
+    description: 'A vibrant selection of seasonal Kenyan coastal fruits — mango, pineapple, passion fruit.',
     category: 'Desserts',
-    image: 'https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=2070&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1619566636858-adf3ef46400b?q=80&w=2070&auto=format&fit=crop',
+    tag: 'Fresh'
   },
   {
     id: 'd2',
     name: 'Decadent Chocolate Cake',
-    description: 'Rich, moist chocolate cake with dark chocolate ganache.',
+    description: 'Rich, moist chocolate cake with dark chocolate ganache and cocoa dust.',
     category: 'Desserts',
     image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=2070&auto=format&fit=crop',
     tag: 'Sweet'
@@ -160,18 +199,48 @@ const menuData: MenuItem[] = [
     name: 'Artisan Cupcakes & Cookies',
     description: 'An assortment of freshly baked, beautifully decorated sweet treats.',
     category: 'Desserts',
-    image: 'https://images.unsplash.com/photo-1586985289071-0d81f4c8651d?q=80&w=2070&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?q=80&w=2070&auto=format&fit=crop'
   },
   {
     id: 'd4',
     name: 'Kashata & Coconut Sweets',
     description: 'Traditional Swahili peanut and coconut confections with cardamom.',
     category: 'Desserts',
-    image: 'https://images.unsplash.com/photo-1575377427642-087cf684f29d?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=2070&auto=format&fit=crop',
     tag: 'Heritage'
   },
+  {
+    id: 'd5',
+    name: 'Mango Sticky Rice',
+    description: 'Sweet coconut sticky rice served with fresh ripe mango slices — a tropical indulgence.',
+    category: 'Desserts',
+    image: 'https://images.unsplash.com/photo-1621293954908-907159247fc8?q=80&w=2070&auto=format&fit=crop',
+    tag: 'Tropical'
+  },
+  {
+    id: 'd6',
+    name: 'Creme Brulee Trio',
+    description: 'Classic vanilla, passion fruit, and coconut-infused creme brulee with caramelized sugar tops.',
+    category: 'Desserts',
+    image: 'https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?q=80&w=2070&auto=format&fit=crop',
+  },
+  {
+    id: 'd7',
+    name: 'Tropical Cheesecake',
+    description: 'Creamy vanilla cheesecake with a passion fruit coulis and biscuit base.',
+    category: 'Desserts',
+    image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=2070&auto=format&fit=crop',
+  },
+  {
+    id: 'd8',
+    name: 'Halwa ya Tanga',
+    description: 'Fragrant Swahili gelatinous dessert infused with cardamom, saffron, and rosewater.',
+    category: 'Desserts',
+    image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=2070&auto=format&fit=crop',
+    tag: 'Swahili Classic'
+  },
 
-  // Drinks
+  // ─── Drinks ───────────────────────────────────────────────────────
   {
     id: 'dr1',
     name: 'Freshly Squeezed Juices',
@@ -201,6 +270,21 @@ const menuData: MenuItem[] = [
     category: 'Drinks',
     image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=2070&auto=format&fit=crop',
     tag: 'Local Favorite'
+  },
+  {
+    id: 'dr5',
+    name: 'Passion Fruit Lassi',
+    description: 'Creamy yoghurt blended with fresh passion fruit and a hint of honey.',
+    category: 'Drinks',
+    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=2070&auto=format&fit=crop',
+  },
+  {
+    id: 'dr6',
+    name: 'Kenyan Chai ya Maziwa',
+    description: 'Rich milky Kenyan tea brewed with ginger, cinnamon, and clove.',
+    category: 'Drinks',
+    image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6201f?q=80&w=2070&auto=format&fit=crop',
+    tag: 'Soul Warming'
   }
 ];
 
@@ -236,6 +320,12 @@ export default function Menu() {
             >
               <Utensils className={cn("w-3.5 h-3.5", activeCategory === category ? "text-white" : "text-secondary")} />
               {category}
+              <span className={cn(
+                "ml-1 px-1.5 py-0.5 rounded-full text-[9px] font-bold",
+                activeCategory === category ? "bg-white/20" : "bg-surface-container-variant"
+              )}>
+                {menuData.filter(item => item.category === category).length}
+              </span>
             </button>
           ))}
         </div>
@@ -248,7 +338,7 @@ export default function Menu() {
             <div key={item.id} className="bg-surface flex flex-col p-5 rounded-xl border border-surface-variant hover:shadow-xl transition-all duration-300 group">
               {item.image && (
                 <div className="aspect-[4/3] rounded-lg overflow-hidden mb-4">
-                  <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
                 </div>
               )}
               <div className="flex-grow">
