@@ -63,13 +63,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
-            <Link to="/" className="flex items-center gap-2 group">
-              <div className={cn(
-                "w-9 h-9 rounded-xl flex items-center justify-center shadow-md transition-transform group-hover:scale-105",
-                isTransparent ? "bg-white/20 border border-white/30" : "bg-primary border border-secondary/30"
-              )}>
-                <span className={cn("font-bold text-base", isTransparent ? "text-white" : "text-secondary")}>A</span>
-              </div>
+            <Link to="/" className="flex items-center gap-2.5 group">
+              <img src="/icon.svg" alt="Agnes Catering" className="w-9 h-9 rounded-xl shadow-md transition-transform group-hover:scale-105" />
               <div className="flex flex-col leading-none">
                 <span className="text-lg md:text-xl font-bold tracking-wider font-display-lg">AGNES</span>
                 <span className="text-[8px] uppercase tracking-[0.15em] opacity-70 font-label-caps">Heritage Dining</span>
@@ -126,10 +121,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="lg:hidden fixed top-0 left-0 w-[280px] h-full bg-surface z-50 shadow-2xl animate-slide-down overflow-y-auto">
               <div className="p-6">
                 <div className="flex items-center justify-between mb-8">
-                  <Link to="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
-                    <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center">
-                      <span className="text-secondary font-bold text-base">A</span>
-                    </div>
+                  <Link to="/" className="flex items-center gap-2.5" onClick={() => setMobileMenuOpen(false)}>
+                    <img src="/icon.svg" alt="Agnes Catering" className="w-9 h-9 rounded-xl" />
                     <span className="text-lg font-bold tracking-wider font-display-lg">AGNES</span>
                   </Link>
                   <button onClick={() => setMobileMenuOpen(false)} className="p-2">
@@ -190,10 +183,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="max-w-[1280px] mx-auto px-4 md:px-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
             <div className="flex flex-col gap-4">
-              <Link to="/" className="flex items-center gap-2">
-                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center border border-white/20">
-                  <span className="text-secondary font-bold text-lg">A</span>
-                </div>
+              <Link to="/" className="flex items-center gap-2.5">
+                <img src="/icon.svg" alt="Agnes Catering" className="w-10 h-10 rounded-xl border border-white/20" />
                 <div>
                   <span className="text-xl font-bold tracking-wider font-display-lg block leading-none">AGNES</span>
                   <span className="text-[9px] uppercase tracking-[0.15em] text-white/60 font-label-caps">Heritage Dining</span>
