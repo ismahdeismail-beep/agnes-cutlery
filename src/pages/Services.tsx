@@ -3,16 +3,16 @@ import { Building2, Heart, UtensilsCrossed, TreePine, GraduationCap, Baby, Party
 import SEO from '../components/SEO';
 
 const servicesList = [
-  { icon: Building2, title: 'Corporate Catering', desc: 'Impress your clients and nourish your team with refined boardroom menus and executive presentation.', img: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop' },
-  { icon: Heart, title: 'Wedding Catering', desc: 'Whether a traditional Ruracio or a modern white wedding, your special day deserves a bespoke culinary journey.', img: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2070&auto=format&fit=crop' },
-  { icon: Cake, title: 'Birthday Parties', desc: 'From kids parties to milestone adult birthdays and family gatherings, we create fun, delicious dining experiences.', img: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=2070&auto=format&fit=crop' },
-  { icon: GraduationCap, title: 'Graduation Ceremonies', desc: 'Celebrate academic achievements with family and friends through premium outdoor setups and extensive buffets.', img: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop' },
-  { icon: Baby, title: 'Baby Shower', desc: 'Elegant buffets, coordinated decorations, and sweet desserts to celebrate the upcoming arrival in style.', img: 'https://images.unsplash.com/photo-1471623320832-752e8bbf8413?q=80&w=2070&auto=format&fit=crop' },
-  { icon: PartyPopper, title: 'Bridal Shower', desc: 'Sophisticated meals, artisanal cocktails, and delightful desserts for an elegant bridal shower celebration.', img: 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=2070&auto=format&fit=crop' },
-  { icon: UtensilsCrossed, title: 'Private Chef', desc: 'The ultimate luxury: a professional Agnes chef in your own home, delivering restaurant-grade meals.', img: 'https://images.unsplash.com/photo-1583394293214-22aed6e6afc1?q=80&w=2070&auto=format&fit=crop' },
-  { icon: TreePine, title: 'Outdoor Catering', desc: 'Expertly managed catering for garden parties, picnics, and outdoor events, bringing the kitchen to nature.', img: 'https://images.unsplash.com/photo-1506368249639-73a05d6f6488?q=80&w=2070&auto=format&fit=crop' },
-  { icon: UtensilsCrossed, title: 'Buffet Services', desc: 'Extensive spreads featuring traditional Kenyan meals, international cuisine, and interactive live cooking stations.', img: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?q=80&w=2070&auto=format&fit=crop' },
-  { icon: ClipboardList, title: 'Event Planning Support', desc: 'Comprehensive support including food planning, professional serving staff, equipment, and menu consultation.', img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop' },
+  { icon: Building2, title: 'Corporate Catering', desc: 'Impress your clients and nourish your team with refined boardroom menus and executive presentation.', img: 'https://images.pexels.com/photos/8112771/pexels-photo-8112771.jpeg?auto=compress&cs=tinysrgb&w=2070' },
+  { icon: Heart, title: 'Wedding Catering', desc: 'Whether a traditional Ruracio or a modern white wedding, your special day deserves a bespoke culinary journey.', img: 'https://images.pexels.com/photos/29040997/pexels-photo-29040997.jpeg?auto=compress&cs=tinysrgb&w=2070' },
+  { icon: Cake, title: 'Birthday Parties', desc: 'From kids parties to milestone adult birthdays and family gatherings, we create fun, delicious dining experiences.', img: 'https://images.pexels.com/photos/7155951/pexels-photo-7155951.jpeg?auto=compress&cs=tinysrgb&w=2070' },
+  { icon: GraduationCap, title: 'Graduation Ceremonies', desc: 'Celebrate academic achievements with family and friends through premium outdoor setups and extensive buffets.', img: 'https://images.pexels.com/photos/38395603/pexels-photo-38395603.jpeg?auto=compress&cs=tinysrgb&w=2070' },
+  { icon: Baby, title: 'Baby Shower', desc: 'Elegant buffets, coordinated decorations, and sweet desserts to celebrate the upcoming arrival in style.', img: 'https://images.pexels.com/photos/1682454/pexels-photo-1682454.jpeg?auto=compress&cs=tinysrgb&w=2070' },
+  { icon: PartyPopper, title: 'Bridal Shower', desc: 'Sophisticated meals, artisanal cocktails, and delightful desserts for an elegant bridal shower celebration.', img: 'https://images.pexels.com/photos/17808339/pexels-photo-17808339.jpeg?auto=compress&cs=tinysrgb&w=2070' },
+  { icon: UtensilsCrossed, title: 'Private Chef', desc: 'The ultimate luxury: a professional Agnes chef in your own home, delivering restaurant-grade meals.', img: 'https://images.pexels.com/photos/30892994/pexels-photo-30892994.jpeg?auto=compress&cs=tinysrgb&w=2070' },
+  { icon: TreePine, title: 'Outdoor Catering', desc: 'Expertly managed catering for garden parties, picnics, and outdoor events, bringing the kitchen to nature.', img: 'https://images.pexels.com/photos/1128782/pexels-photo-1128782.jpeg?auto=compress&cs=tinysrgb&w=2070' },
+  { icon: UtensilsCrossed, title: 'Buffet Services', desc: 'Extensive spreads featuring traditional Kenyan meals, international cuisine, and interactive live cooking stations.', img: 'https://images.pexels.com/photos/14457437/pexels-photo-14457437.jpeg?auto=compress&cs=tinysrgb&w=2070' },
+  { icon: ClipboardList, title: 'Event Planning Support', desc: 'Comprehensive support including food planning, professional serving staff, equipment, and menu consultation.', img: 'https://images.pexels.com/photos/16120230/pexels-photo-16120230.jpeg?auto=compress&cs=tinysrgb&w=2070' },
 ];
 
 export default function Services() {
@@ -79,7 +79,7 @@ export default function Services() {
           </a>
         </div>
         <div className="md:col-span-5 hidden md:block">
-          <div className="bg-cover bg-center w-full h-[400px] rounded-xl shadow-2xl" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1555244162-803834f87a41?q=80&w=2070&auto=format&fit=crop')` }} />
+          <div className="bg-cover bg-center w-full h-[400px] rounded-xl shadow-2xl" style={{ backgroundImage: `url('https://images.pexels.com/photos/19955703/pexels-photo-19955703.jpeg?auto=compress&cs=tinysrgb&w=2070')` }} />
         </div>
       </section>
     </div>
