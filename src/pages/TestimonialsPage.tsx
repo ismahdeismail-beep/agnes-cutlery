@@ -4,16 +4,15 @@ import SEO from '../components/SEO';
 
 export default function TestimonialsPage() {
   return (
-    <div className="pt-24 pb-24">
+    <div className="pt-24 pb-32 md:pb-24">
       <SEO 
         title="Client Testimonials" 
-        description="Read what our clients have to say about their experiences with Agnes Catering. We take pride in delivering unforgettable culinary moments."
+        description="Read what our clients have to say about their experiences with Agnes Catering."
       />
-      {/* We reuse the Testimonials component but could expand it for a dedicated page */}
-      <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-8 pt-8">
-        <h1 className="text-display-lg-mobile md:text-display-lg text-primary text-center">Client Stories</h1>
-        <p className="text-body-lg text-on-surface-variant text-center max-w-2xl mx-auto mt-6">
-          Read what our clients have to say about their experiences with Agnes Catering. We take pride in delivering unforgettable culinary moments.
+      <div className="max-w-[1280px] mx-auto px-4 md:px-16 mb-8 pt-8">
+        <h1 className="text-[32px] md:text-[56px] text-primary text-center font-display-lg leading-tight">Client Stories</h1>
+        <p className="text-sm md:text-base text-on-surface-variant text-center max-w-2xl mx-auto mt-4 leading-relaxed">
+          Read what our clients have to say about their experiences with Agnes Catering.
         </p>
       </div>
       <Testimonials />

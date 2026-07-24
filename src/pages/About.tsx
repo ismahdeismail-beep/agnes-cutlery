@@ -2,73 +2,62 @@ import React from 'react';
 import { Award, Heart, Clock, ShieldCheck } from 'lucide-react';
 import SEO from '../components/SEO';
 
-import aboutImg from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.07 AM.jpeg';
-
 export default function About() {
   return (
-    <div className="pt-32 pb-24">
+    <div className="pt-24 pb-32 md:pb-24">
       <SEO 
         title="Our Story" 
         description="Learn about Agnes Catering, our heritage, and our commitment to culinary excellence in Nairobi."
       />
+      
       {/* Hero */}
-      <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-24">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="max-w-[1280px] mx-auto px-4 md:px-16 mb-16 md:mb-24">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
-            <span className="text-label-caps text-secondary mb-4 block uppercase tracking-widest">Our Story</span>
-            <h1 className="text-display-lg-mobile md:text-display-lg text-primary mb-8">Crafting Memories Through Food</h1>
-            <p className="text-body-lg text-on-surface-variant mb-6">
+            <span className="text-xs text-secondary mb-3 block uppercase tracking-widest font-label-caps">Our Story</span>
+            <h1 className="text-[32px] md:text-[56px] text-primary mb-6 font-display-lg leading-tight">Crafting Memories Through Food</h1>
+            <p className="text-sm md:text-base text-on-surface-variant mb-4 leading-relaxed">
               Founded on the belief that great food brings people together, Agnes Catering has grown from a passionate home kitchen into one of Nairobi's premier catering services.
             </p>
-            <p className="text-body-lg text-on-surface-variant">
+            <p className="text-sm md:text-base text-on-surface-variant leading-relaxed">
               We specialize in blending rich Kenyan heritage with modern culinary techniques, ensuring every dish we serve is a testament to quality, flavor, and elegance.
             </p>
           </div>
           <div className="relative">
-            <img src={aboutImg} alt="Agnes Catering Chef" className="rounded-2xl shadow-2xl w-full object-cover aspect-[4/5]" />
-            <div className="absolute -bottom-8 -left-8 bg-surface p-8 rounded-xl shadow-xl border border-surface-variant">
-              <p className="text-display-sm text-secondary font-bold">10+</p>
-              <p className="text-label-caps text-primary uppercase tracking-widest">Years of Excellence</p>
+            <img 
+              src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=1977&auto=format&fit=crop" 
+              alt="Agnes Catering Chef" 
+              className="rounded-2xl shadow-2xl w-full object-cover aspect-[4/3]" 
+            />
+            <div className="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-xl shadow-xl">
+              <p className="text-2xl font-bold font-display-lg">10+</p>
+              <p className="text-xs uppercase tracking-widest opacity-80">Years of Excellence</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Values */}
-      <section className="bg-surface-container-low py-24">
-        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-          <div className="text-center mb-16">
-            <h2 className="text-headline-md text-primary">Our Core Values</h2>
+      <section className="bg-surface-container-low py-16 md:py-24">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-16">
+          <div className="text-center mb-12">
+            <h2 className="text-[24px] md:text-[28px] text-primary font-display-lg">Our Core Values</h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-surface p-8 rounded-xl border border-surface-variant text-center shadow-sm">
-              <div className="w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
-                <Heart className="w-8 h-8" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              { icon: Heart, title: 'Passion', desc: 'We pour love into every recipe, ensuring each bite is an experience to remember.' },
+              { icon: ShieldCheck, title: 'Quality', desc: 'Only the freshest, locally sourced ingredients make it into our kitchen.' },
+              { icon: Clock, title: 'Reliability', desc: 'Punctual execution and seamless service so you can focus on your guests.' },
+              { icon: Award, title: 'Professionalism', desc: 'Expert staff trained to deliver discreet, high-end hospitality.' },
+            ].map((item, i) => (
+              <div key={i} className="bg-surface p-6 rounded-xl border border-surface-variant text-center shadow-sm">
+                <div className="w-12 h-12 bg-primary/5 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
+                  <item.icon className="w-6 h-6" />
+                </div>
+                <h3 className="text-base text-primary mb-2 font-display-lg">{item.title}</h3>
+                <p className="text-xs text-on-surface-variant leading-relaxed">{item.desc}</p>
               </div>
-              <h3 className="text-headline-sm text-primary mb-4">Passion</h3>
-              <p className="text-body-md text-on-surface-variant">We pour love into every recipe, ensuring each bite is an experience to remember.</p>
-            </div>
-            <div className="bg-surface p-8 rounded-xl border border-surface-variant text-center shadow-sm">
-              <div className="w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
-                <ShieldCheck className="w-8 h-8" />
-              </div>
-              <h3 className="text-headline-sm text-primary mb-4">Quality</h3>
-              <p className="text-body-md text-on-surface-variant">Only the freshest, locally sourced ingredients make it into our kitchen.</p>
-            </div>
-            <div className="bg-surface p-8 rounded-xl border border-surface-variant text-center shadow-sm">
-              <div className="w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
-                <Clock className="w-8 h-8" />
-              </div>
-              <h3 className="text-headline-sm text-primary mb-4">Reliability</h3>
-              <p className="text-body-md text-on-surface-variant">Punctual execution and seamless service so you can focus on your guests.</p>
-            </div>
-            <div className="bg-surface p-8 rounded-xl border border-surface-variant text-center shadow-sm">
-              <div className="w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
-                <Award className="w-8 h-8" />
-              </div>
-              <h3 className="text-headline-sm text-primary mb-4">Professionalism</h3>
-              <p className="text-body-md text-on-surface-variant">Expert staff trained to deliver discreet, high-end hospitality.</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>

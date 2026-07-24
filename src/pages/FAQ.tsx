@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
+import { Plus, Minus, MessageCircle } from 'lucide-react';
 import { cn } from '../lib/utils';
 import SEO from '../components/SEO';
 
 const faqs = [
   {
     question: "How do I book your catering services?",
-    answer: "The fastest and most direct way to book is by clicking any of the 'Book via WhatsApp' buttons on our website. This will open a direct chat with Agnes where we can discuss your event details, menu preferences, and secure your date."
+    answer: "The fastest way to book is by clicking any 'Book via WhatsApp' button on our website. This opens a direct chat with Agnes where we discuss your event details, menu preferences, and secure your date."
   },
   {
     question: "How much do you charge?",
@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     question: "Do you provide serving staff and equipment?",
-    answer: "Absolutely. Our catering packages can include professional waitstaff, chefs, and bartenders. We also provide all necessary catering equipment, serving dishes, and can assist with sourcing tables, chairs, and linens if required."
+    answer: "Absolutely. Our catering packages can include professional waitstaff, chefs, and bartenders. We also provide all necessary catering equipment, serving dishes, and can assist with sourcing tables, chairs, and linens."
   },
   {
     question: "Can menus be customized?",
@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     question: "How early should I book?",
-    answer: "For large events like weddings and corporate functions, we recommend booking at least 3-6 months in advance to secure your preferred date. For smaller events or private chef services, 2-4 weeks notice is ideal, though we do our best to accommodate short-notice requests when our schedule permits."
+    answer: "For large events like weddings and corporate functions, we recommend booking 3-6 months in advance. For smaller events or private chef services, 2-4 weeks notice is ideal, though we accommodate short-notice requests when possible."
   }
 ];
 
@@ -38,37 +38,37 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <div className="pt-32 pb-24 max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop">
+    <div className="pt-24 pb-32 md:pb-24 max-w-3xl mx-auto px-4 md:px-8">
       <SEO 
         title="Frequently Asked Questions" 
         description="Find answers to common questions about our catering services, pricing, availability, and more."
       />
-      <div className="text-center mb-16">
-        <span className="text-label-caps text-secondary mb-4 block uppercase tracking-widest">Questions & Answers</span>
-        <h1 className="text-display-lg-mobile md:text-display-lg text-primary">Frequently Asked Questions</h1>
+      <div className="text-center mb-12">
+        <span className="text-xs text-secondary mb-3 block uppercase tracking-widest font-label-caps">Questions & Answers</span>
+        <h1 className="text-[32px] md:text-[56px] text-primary font-display-lg leading-tight">Frequently Asked Questions</h1>
       </div>
 
-      <div className="space-y-4">
+      <div className="space-y-3">
         {faqs.map((faq, index) => (
-          <div key={index} className="border border-surface-variant rounded-lg overflow-hidden bg-surface">
+          <div key={index} className="border border-surface-variant rounded-xl overflow-hidden bg-surface">
             <button
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              className="w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none"
+              className="w-full px-5 py-4 flex items-center justify-between text-left focus:outline-none active:bg-surface-container-low/50 transition-colors"
             >
-              <span className="text-headline-sm text-primary">{faq.question}</span>
+              <span className="text-sm text-primary font-medium pr-4">{faq.question}</span>
               {openIndex === index ? (
-                <Minus className="w-5 h-5 text-secondary flex-shrink-0" />
+                <Minus className="w-4 h-4 text-secondary flex-shrink-0" />
               ) : (
-                <Plus className="w-5 h-5 text-primary flex-shrink-0" />
+                <Plus className="w-4 h-4 text-primary flex-shrink-0" />
               )}
             </button>
             <div
               className={cn(
-                "px-6 overflow-hidden transition-all duration-300 ease-in-out",
-                openIndex === index ? "max-h-96 pb-6 opacity-100" : "max-h-0 opacity-0"
+                "px-5 overflow-hidden transition-all duration-300 ease-in-out",
+                openIndex === index ? "max-h-96 pb-5 opacity-100" : "max-h-0 opacity-0"
               )}
             >
-              <p className="text-body-md text-on-surface-variant pt-2 border-t border-surface-variant">
+              <p className="text-xs text-on-surface-variant pt-3 border-t border-surface-variant/50 leading-relaxed">
                 {faq.answer}
               </p>
             </div>
@@ -76,11 +76,16 @@ export default function FAQ() {
         ))}
       </div>
       
-      <div className="mt-16 text-center bg-surface-container-low p-8 rounded-xl border border-surface-variant">
-        <h3 className="text-headline-sm text-primary mb-4">Still have questions?</h3>
-        <p className="text-body-md text-on-surface-variant mb-6">We're here to help make your event planning seamless.</p>
-        <a href="https://wa.me/254797453969?text=Hello%20Agnes%20Catering%2C%20I%20have%20a%20question%20about%20your%20services." target="_blank" rel="noreferrer" className="inline-block bg-primary text-on-primary px-8 py-3 rounded text-label-caps uppercase tracking-widest hover:bg-primary-container transition-all">
-          Ask via WhatsApp
+      <div className="mt-12 text-center bg-surface-container-low p-6 md:p-8 rounded-xl border border-surface-variant">
+        <h3 className="text-lg text-primary mb-3 font-display-lg">Still have questions?</h3>
+        <p className="text-xs text-on-surface-variant mb-5">We're here to help make your event planning seamless.</p>
+        <a 
+          href="https://wa.me/254797453969?text=Hello%20Agnes%20Catering%2C%20I%20have%20a%20question%20about%20your%20services." 
+          target="_blank" 
+          rel="noreferrer" 
+          className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full text-xs font-bold tracking-widest hover:bg-primary-container transition-all shadow-lg"
+        >
+          <MessageCircle className="w-4 h-4" /> Ask via WhatsApp
         </a>
       </div>
     </div>

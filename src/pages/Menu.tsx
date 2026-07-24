@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Download, Utensils, QrCode } from 'lucide-react';
+import { Download, Utensils, MessageCircle } from 'lucide-react';
 import { cn } from '../lib/utils';
 import SEO from '../components/SEO';
 
@@ -21,7 +21,7 @@ const menuData: MenuItem[] = [
     name: 'Swahili Pilau Heritage',
     description: 'Aromatic Basmati rice cooked with our signature spice blend, served with tender beef or chicken.',
     category: 'Traditional Kenyan',
-    image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=1913&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=2070&auto=format&fit=crop',
     tag: 'House Favorite'
   },
   {
@@ -36,7 +36,7 @@ const menuData: MenuItem[] = [
     name: 'Mukimo & Stew',
     description: 'Traditional mashed green peas, potatoes, and corn, served with rich beef stew.',
     category: 'Traditional Kenyan',
-    image: 'https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=2070&auto=format&fit=crop',
     tag: 'Authentic'
   },
   {
@@ -44,21 +44,21 @@ const menuData: MenuItem[] = [
     name: 'Soft Layered Chapati',
     description: 'Flaky, buttery chapatis served with your choice of savory stews or vegetables.',
     category: 'Traditional Kenyan',
-    image: 'https://images.unsplash.com/photo-1555244162-803834f87a41?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=2071&auto=format&fit=crop',
   },
   {
     id: 'tk5',
     name: 'Coastal Biryani',
     description: 'Rich, spiced rice dish cooked with tender chicken or beef in a thick, flavorful sauce.',
     category: 'Traditional Kenyan',
-    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=2070&auto=format&fit=crop',
   },
   {
     id: 'tk6',
     name: 'Ugali & Sukuma Wiki',
-    description: 'Classic cornmeal mash served with sautéed collard greens and tender braised beef.',
+    description: 'Classic cornmeal mash served with sauteed collard greens and tender braised beef.',
     category: 'Traditional Kenyan',
-    image: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?q=80&w=2070&auto=format&fit=crop',
   },
   {
     id: 'tk7',
@@ -82,7 +82,7 @@ const menuData: MenuItem[] = [
     name: 'Rosemary Roast Chicken',
     description: 'Half-chicken marinated in garlic and rosemary, roasted to golden perfection.',
     category: 'International',
-    image: 'https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1598103442097-8b74d3add518?q=80&w=2070&auto=format&fit=crop',
     tag: 'Classic'
   },
   {
@@ -90,7 +90,7 @@ const menuData: MenuItem[] = [
     name: 'Gourmet Pasta & Seafood',
     description: 'Linguine tossed with fresh seafood in a light garlic, white wine, and herb sauce.',
     category: 'International',
-    image: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=1977&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1563379926898-05f4575a45d8?q=80&w=2070&auto=format&fit=crop',
   },
   {
     id: 'i3',
@@ -102,9 +102,9 @@ const menuData: MenuItem[] = [
   {
     id: 'i4',
     name: 'Artisan Wood-Fired Pizza',
-    description: 'Hand-tossed crust with gourmet toppings, baked to perfection.',
+    description: 'Hand-tossed crust with gourmet toppings, baked to crispy perfection.',
     category: 'International',
-    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=2069&auto=format&fit=crop',
   },
 
   // Breakfast
@@ -113,7 +113,7 @@ const menuData: MenuItem[] = [
     name: 'Swahili Cardamom Mandazi',
     description: 'Hand-kneaded sweet cardamom fried dough, authentically light and airy.',
     category: 'Breakfast',
-    image: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=2070&auto=format&fit=crop',
     tag: 'Classic'
   },
   {
@@ -121,7 +121,7 @@ const menuData: MenuItem[] = [
     name: 'Fluffy Pancakes & Syrups',
     description: 'Stack of buttermilk pancakes served with assorted syrups and fresh berries.',
     category: 'Breakfast',
-    image: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=2070&auto=format&fit=crop',
   },
   {
     id: 'b3',
@@ -167,7 +167,7 @@ const menuData: MenuItem[] = [
     name: 'Kashata & Coconut Sweets',
     description: 'Traditional Swahili peanut and coconut confections with cardamom.',
     category: 'Desserts',
-    image: 'https://images.unsplash.com/photo-1555244162-803834f87a41?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=2070&auto=format&fit=crop',
     tag: 'Heritage'
   },
 
@@ -177,7 +177,7 @@ const menuData: MenuItem[] = [
     name: 'Freshly Squeezed Juices',
     description: 'Orange, passion fruit, mango, and mixed tropical blends.',
     category: 'Drinks',
-    image: 'https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?q=80&w=2070&auto=format&fit=crop',
   },
   {
     id: 'dr2',
@@ -212,66 +212,76 @@ export default function Menu() {
   const filteredItems = menuData.filter(item => item.category === activeCategory);
 
   return (
-    <div className="pt-24 pb-32">
+    <div className="pt-24 pb-32 md:pb-24">
       <SEO 
         title="Our Menus" 
         description="Discover our curated culinary heritage. From traditional Kenyan delicacies to contemporary international fare, our menu is a celebration of flavor."
       />
-      <section className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-12 md:py-20 text-center">
-        <h1 className="text-display-lg-mobile md:text-display-lg mb-4 text-primary">Curated Culinary Heritage</h1>
-        <p className="text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">From traditional Kenyan delicacies to contemporary international fare, our menu is a celebration of flavor, precision, and history.</p>
+      <section className="px-4 md:px-16 max-w-[1280px] mx-auto py-8 md:py-16 text-center">
+        <h1 className="text-[32px] md:text-[56px] mb-4 text-primary font-display-lg leading-tight">Curated Culinary Heritage</h1>
+        <p className="text-sm md:text-base text-on-surface-variant max-w-2xl mx-auto mb-10">From traditional Kenyan delicacies to contemporary international fare, our menu is a celebration of flavor, precision, and history.</p>
         
-        {/* Dynamic Category Filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
+        {/* Category Filters */}
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-6 py-3 rounded-full text-label-caps transition-all duration-300 flex items-center gap-2 border",
+                "px-5 py-2.5 rounded-full text-xs font-bold tracking-widest transition-all duration-300 flex items-center gap-2 border font-label-caps",
                 activeCategory === category
-                  ? "bg-primary text-on-primary border-primary shadow-lg"
-                  : "bg-surface border-surface-variant text-primary hover:bg-surface-variant"
+                  ? "bg-primary text-white border-primary shadow-lg"
+                  : "bg-surface border-surface-variant text-primary hover:bg-surface-container"
               )}
             >
-              <Utensils className={cn("w-4 h-4", activeCategory === category ? "text-on-primary" : "text-secondary")} />
+              <Utensils className={cn("w-3.5 h-3.5", activeCategory === category ? "text-white" : "text-secondary")} />
               {category}
             </button>
           ))}
         </div>
       </section>
 
-      {/* Dynamic Menu Display */}
-      <section className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500 min-h-[500px]">
+      {/* Menu Items */}
+      <section className="px-4 md:px-16 max-w-[1280px] mx-auto pb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {filteredItems.map((item) => (
-            <div key={item.id} className="bg-surface flex flex-col p-6 rounded-xl border border-surface-variant hover:shadow-xl transition-all duration-500 group">
+            <div key={item.id} className="bg-surface flex flex-col p-5 rounded-xl border border-surface-variant hover:shadow-xl transition-all duration-300 group">
               {item.image && (
-                <div className="aspect-[4/3] rounded-lg overflow-hidden mb-6">
+                <div className="aspect-[4/3] rounded-lg overflow-hidden mb-4">
                   <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
               )}
               <div className="flex-grow">
-                <h3 className="text-headline-sm text-primary mb-2">{item.name}</h3>
-                <p className="text-body-md text-on-surface-variant mb-4">{item.description}</p>
+                <h3 className="text-base text-primary mb-1.5 font-display-lg">{item.name}</h3>
+                <p className="text-xs text-on-surface-variant leading-relaxed mb-3">{item.description}</p>
               </div>
-              <div className="flex justify-between items-center border-t border-surface-variant pt-4 mt-auto">
+              <div className="flex justify-between items-center border-t border-surface-variant/50 pt-3 mt-auto">
                 {item.tag ? (
-                  <span className="text-label-caps text-secondary uppercase text-xs tracking-widest">{item.tag}</span>
+                  <span className="text-[10px] text-secondary uppercase tracking-widest font-bold font-label-caps">{item.tag}</span>
                 ) : (
                   <span></span>
                 )}
-                <a href={`https://wa.me/254797453969?text=Hello%20Agnes%20Catering%2C%20I%20am%20interested%20in%20your%20${encodeURIComponent(item.name)}%20menu.`} target="_blank" rel="noreferrer" className="text-primary hover:text-secondary transition-colors inline-flex items-center gap-1 text-sm font-label-caps">
-                  <QrCode className="w-4 h-4" /> INQUIRE
+                <a 
+                  href={`https://wa.me/254797453969?text=Hello%20Agnes%20Catering%2C%20I%20am%20interested%20in%20your%20${encodeURIComponent(item.name)}%20menu.`} 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="text-primary hover:text-secondary transition-colors inline-flex items-center gap-1 text-[11px] font-bold font-label-caps"
+                >
+                  <MessageCircle className="w-3 h-3" /> INQUIRE
                 </a>
               </div>
             </div>
           ))}
         </div>
         
-        <div className="flex justify-center mt-20 pt-10 border-t border-surface-variant">
-          <a href="https://wa.me/254797453969?text=Hello%20Agnes%20Catering%2C%20I%20would%20like%20to%20request%20your%20full%20menu%20PDF." target="_blank" rel="noreferrer" className="bg-primary text-on-primary px-10 py-4 rounded-lg text-label-caps hover:bg-primary-container transition-all flex items-center gap-3 shadow-lg">
-            <Download className="w-5 h-5" /> Request Full Menu PDF
+        <div className="flex justify-center mt-16 pt-10 border-t border-surface-variant">
+          <a 
+            href="https://wa.me/254797453969?text=Hello%20Agnes%20Catering%2C%20I%20would%20like%20to%20request%20your%20full%20menu%20PDF." 
+            target="_blank" 
+            rel="noreferrer" 
+            className="bg-primary text-white px-8 py-3.5 rounded-xl text-xs font-bold tracking-widest hover:bg-primary-container transition-all flex items-center gap-3 shadow-lg"
+          >
+            <Download className="w-4 h-4" /> Request Full Menu PDF
           </a>
         </div>
       </section>

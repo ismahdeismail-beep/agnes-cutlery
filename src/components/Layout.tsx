@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, QrCode, Phone, Share2, Globe, Heart, Mail, MapPin, Wine, Utensils, Flower2, Facebook, Instagram } from 'lucide-react';
+import { Menu, Phone, Utensils, MessageCircle, Search, X, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '../lib/utils';
 import QuickChat from './QuickChat';
@@ -29,92 +29,155 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 50;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
+      setScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [scrolled]);
+  }, []);
 
   useEffect(() => {
     setMobileMenuOpen(false);
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   const isHome = location.pathname === '/';
   const isWeddings = location.pathname === '/weddings';
+  const isTransparent = (isHome || isWeddings) && !scrolled;
 
   return (
     <div className="flex flex-col min-h-screen">
       <header
         className={cn(
-          'fixed top-0 w-full z-50 transition-all duration-300 ease-in-out border-b border-surface-variant',
-          scrolled ? 'py-2 shadow-sm bg-surface/90 glass-nav' : 'py-4 bg-surface/80 glass-nav',
-          (isHome || isWeddings) && !scrolled ? 'bg-transparent border-transparent text-white' : 'text-primary border-surface-variant'
+          'fixed top-0 left-0 w-full z-50 transition-all duration-300',
+          scrolled ? 'py-2 shadow-md glass-nav' : 'py-3 bg-surface/80 backdrop-blur-sm',
+          isTransparent ? 'bg-transparent text-white' : 'text-primary border-b border-surface-variant/30'
         )}
       >
-        <div className="flex justify-between items-center px-4 md:px-margin-desktop py-2 md:py-4 max-w-container-max mx-auto">
-          <div className="flex items-center gap-2 md:gap-3">
+        <div className="flex justify-between items-center px-4 md:px-16 py-1 md:py-2 max-w-[1280px] mx-auto">
+          {/* Left: Hamburger + Logo */}
+          <div className="flex items-center gap-2">
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
-              className="lg:hidden p-2 -ml-2 rounded-lg hover:bg-black/5 transition-colors"
+              className="lg:hidden p-2 -ml-2 rounded-lg active:bg-black/5 transition-colors"
               aria-label="Toggle Menu"
             >
-              <Menu className="w-6 h-6" />
+              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
-            <Link to="/" className="flex items-center gap-2.5 group">
-              <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-primary flex items-center justify-center shadow-md border border-secondary/40 group-hover:scale-105 transition-transform">
-                <span className="text-secondary font-display-lg font-bold text-base md:text-lg">A</span>
+            <Link to="/" className="flex items-center gap-2 group">
+              <div className={cn(
+                "w-9 h-9 rounded-xl flex items-center justify-center shadow-md transition-transform group-hover:scale-105",
+                isTransparent ? "bg-white/20 border border-white/30" : "bg-primary border border-secondary/30"
+              )}>
+                <span className={cn("font-bold text-base", isTransparent ? "text-white" : "text-secondary")}>A</span>
               </div>
-              <div className="flex flex-col">
-                <span className="text-lg md:text-2xl font-bold tracking-wider font-display-lg leading-none">AGNES</span>
-                <span className="text-[8px] md:text-[9px] uppercase tracking-[0.2em] opacity-75 font-label-caps mt-0.5">Heritage Dining</span>
+              <div className="flex flex-col leading-none">
+                <span className="text-lg md:text-xl font-bold tracking-wider font-display-lg">AGNES</span>
+                <span className="text-[8px] uppercase tracking-[0.15em] opacity-70 font-label-caps">Heritage Dining</span>
               </div>
             </Link>
           </div>
-          <nav className="hidden xl:flex items-center gap-8">
-            <Link to="/" className={cn("font-label-caps transition-colors text-sm uppercase tracking-wider", location.pathname === '/' ? "font-bold" : "hover:text-secondary")}>Home</Link>
-            <Link to="/about" className={cn("font-label-caps transition-colors text-sm uppercase tracking-wider", location.pathname === '/about' ? "font-bold" : "hover:text-secondary")}>About</Link>
-            <Link to="/services" className={cn("font-label-caps transition-colors text-sm uppercase tracking-wider", location.pathname === '/services' ? "font-bold" : "hover:text-secondary")}>Services</Link>
-            <Link to="/gallery" className={cn("font-label-caps transition-colors text-sm uppercase tracking-wider", location.pathname === '/gallery' ? "font-bold" : "hover:text-secondary")}>Gallery</Link>
-            <Link to="/testimonials" className={cn("font-label-caps transition-colors text-sm uppercase tracking-wider", location.pathname === '/testimonials' ? "font-bold" : "hover:text-secondary")}>Testimonials</Link>
-            <Link to="/faq" className={cn("font-label-caps transition-colors text-sm uppercase tracking-wider", location.pathname === '/faq' ? "font-bold" : "hover:text-secondary")}>FAQ</Link>
-            <Link to="/contact" className={cn("font-label-caps transition-colors text-sm uppercase tracking-wider", location.pathname === '/contact' ? "font-bold" : "hover:text-secondary")}>Contact</Link>
+
+          {/* Center: Desktop Nav */}
+          <nav className="hidden xl:flex items-center gap-6">
+            {[
+              { to: '/', label: 'Home' },
+              { to: '/about', label: 'About' },
+              { to: '/services', label: 'Services' },
+              { to: '/menu', label: 'Menus' },
+              { to: '/gallery', label: 'Gallery' },
+              { to: '/weddings', label: 'Weddings' },
+              { to: '/testimonials', label: 'Testimonials' },
+              { to: '/contact', label: 'Contact' },
+            ].map(item => (
+              <Link key={item.to} to={item.to} className={cn(
+                "font-label-caps transition-colors text-xs uppercase tracking-widest py-2",
+                location.pathname === item.to ? "font-bold border-b-2 border-secondary" : "opacity-80 hover:opacity-100"
+              )}>
+                {item.label}
+              </Link>
+            ))}
           </nav>
-          <div className="flex items-center gap-2 md:gap-4">
-            <div className={cn(
-              "transition-colors",
-              (isHome || isWeddings) && !scrolled ? "text-white" : "text-primary"
-            )}>
+
+          {/* Right: Search + Book */}
+          <div className="flex items-center gap-2 md:gap-3">
+            <div className={cn("transition-colors", isTransparent ? "text-white" : "text-primary")}>
               <SearchBar />
             </div>
-            <a href="https://wa.me/254797453969?text=Hello%20Agnes%20Catering%2C%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" rel="noreferrer" className={cn(
-              "px-5 py-2.5 rounded-full transition-all duration-300 hidden md:block font-label-caps tracking-widest text-sm",
-              (isHome || isWeddings) && !scrolled ? "bg-white/10 backdrop-blur-md text-white border border-white/20 hover:bg-white hover:text-primary" : "bg-primary text-on-primary hover:bg-primary-container"
-            )}>
+            <a 
+              href="https://wa.me/254797453969?text=Hello%20Agnes%20Catering%2C%20I%20would%20like%20to%20make%20an%20inquiry." 
+              target="_blank" 
+              rel="noreferrer" 
+              className={cn(
+                "px-4 py-2.5 rounded-full transition-all duration-300 hidden md:inline-flex items-center gap-2 font-label-caps tracking-widest text-xs",
+                isTransparent 
+                  ? "bg-white text-primary hover:bg-white/90 shadow-lg" 
+                  : "bg-primary text-white hover:bg-primary-container shadow-lg"
+              )}
+            >
               BOOK NOW
             </a>
           </div>
         </div>
 
-        {/* Mobile Fullscreen Menu Drawer */}
+        {/* Mobile Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 w-full bg-surface/98 glass-nav border-b border-surface-variant p-6 shadow-2xl flex flex-col gap-4 animate-in slide-in-from-top duration-300">
-            <Link to="/" className="text-lg font-bold py-2 border-b border-surface-variant/40 text-primary">Home</Link>
-            <Link to="/about" className="text-lg font-bold py-2 border-b border-surface-variant/40 text-primary">About</Link>
-            <Link to="/services" className="text-lg font-bold py-2 border-b border-surface-variant/40 text-primary">Services</Link>
-            <Link to="/menu" className="text-lg font-bold py-2 border-b border-surface-variant/40 text-primary">Menus</Link>
-            <Link to="/gallery" className="text-lg font-bold py-2 border-b border-surface-variant/40 text-primary">Gallery</Link>
-            <Link to="/private-chef" className="text-lg font-bold py-2 border-b border-surface-variant/40 text-primary">Private Dining</Link>
-            <Link to="/weddings" className="text-lg font-bold py-2 border-b border-surface-variant/40 text-primary">Weddings</Link>
-            <Link to="/testimonials" className="text-lg font-bold py-2 border-b border-surface-variant/40 text-primary">Testimonials</Link>
-            <Link to="/faq" className="text-lg font-bold py-2 border-b border-surface-variant/40 text-primary">FAQ</Link>
-            <Link to="/contact" className="text-lg font-bold py-2 text-primary">Contact</Link>
-            <a href="https://wa.me/254797453969?text=Hello%20Agnes%20Catering%2C%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" rel="noreferrer" className="mt-4 bg-primary text-white text-center py-3.5 rounded-xl font-label-caps tracking-widest shadow-lg">
-              BOOK VIA WHATSAPP
-            </a>
-          </div>
+          <>
+            <div className="lg:hidden fixed inset-0 bg-black/40 z-40" onClick={() => setMobileMenuOpen(false)} />
+            <div className="lg:hidden fixed top-0 left-0 w-[280px] h-full bg-surface z-50 shadow-2xl animate-slide-down overflow-y-auto">
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-8">
+                  <Link to="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
+                    <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center">
+                      <span className="text-secondary font-bold text-base">A</span>
+                    </div>
+                    <span className="text-lg font-bold tracking-wider font-display-lg">AGNES</span>
+                  </Link>
+                  <button onClick={() => setMobileMenuOpen(false)} className="p-2">
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+                
+                <nav className="flex flex-col gap-1">
+                  {[
+                    { to: '/', label: 'Home' },
+                    { to: '/about', label: 'About Us' },
+                    { to: '/services', label: 'Services' },
+                    { to: '/menu', label: 'Our Menus' },
+                    { to: '/gallery', label: 'Gallery' },
+                    { to: '/private-chef', label: 'Private Chef' },
+                    { to: '/weddings', label: 'Weddings' },
+                    { to: '/testimonials', label: 'Testimonials' },
+                    { to: '/faq', label: 'FAQ' },
+                    { to: '/contact', label: 'Contact' },
+                  ].map(item => (
+                    <Link 
+                      key={item.to} 
+                      to={item.to} 
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={cn(
+                        "py-3 px-4 rounded-lg text-sm font-medium transition-colors",
+                        location.pathname === item.to 
+                          ? "bg-primary text-white" 
+                          : "text-on-surface hover:bg-surface-container"
+                      )}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </nav>
+                
+                <a 
+                  href="https://wa.me/254797453969?text=Hello%20Agnes%20Catering%2C%20I%20would%20like%20to%20make%20an%20inquiry." 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="mt-6 w-full bg-primary text-white text-center py-3.5 rounded-xl font-label-caps tracking-widest text-xs shadow-lg flex items-center justify-center gap-2"
+                >
+                  <MessageCircle className="w-4 h-4" /> BOOK VIA WHATSAPP
+                </a>
+              </div>
+            </div>
+          </>
         )}
       </header>
 
@@ -122,93 +185,126 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {children}
       </main>
 
-      <footer className="bg-surface-container-high border-t border-surface-variant py-20 mt-auto">
-        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-            <div className="flex flex-col gap-6">
-              <h2 className="text-display-lg text-primary">AGNES</h2>
-              <p className="text-on-surface-variant">Exceptional catering for those who value the art of dining. Bringing Kenyan heritage to modern celebrations.</p>
-              <div className="flex gap-4">
-                <a href="https://www.facebook.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center hover:bg-[#1877F2] hover:border-[#1877F2] hover:text-white transition-all text-primary"><Facebook className="w-5 h-5" /></a>
-                <a href="https://www.instagram.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center hover:bg-gradient-to-tr hover:from-[#fd5949] hover:to-[#d6249f] hover:border-transparent hover:text-white transition-all text-primary"><Instagram className="w-5 h-5" /></a>
-                <a href="https://www.tiktok.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center hover:bg-black hover:border-black hover:text-white transition-all text-primary"><TikTokIcon className="w-5 h-5" /></a>
+      {/* Footer */}
+      <footer className="bg-primary text-white pt-16 pb-8 mt-auto">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+            <div className="flex flex-col gap-4">
+              <Link to="/" className="flex items-center gap-2">
+                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center border border-white/20">
+                  <span className="text-secondary font-bold text-lg">A</span>
+                </div>
+                <div>
+                  <span className="text-xl font-bold tracking-wider font-display-lg block leading-none">AGNES</span>
+                  <span className="text-[9px] uppercase tracking-[0.15em] text-white/60 font-label-caps">Heritage Dining</span>
+                </div>
+              </Link>
+              <p className="text-white/70 text-sm leading-relaxed">Exceptional catering for those who value the art of dining. Bringing Kenyan heritage to modern celebrations.</p>
+              <div className="flex gap-3">
+                <a href="https://www.facebook.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-[#1877F2] hover:border-[#1877F2] transition-all"><Facebook className="w-4 h-4" /></a>
+                <a href="https://www.instagram.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gradient-to-tr hover:from-[#fd5949] hover:to-[#d6249f] hover:border-transparent transition-all"><Instagram className="w-4 h-4" /></a>
+                <a href="https://www.tiktok.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-black hover:border-white transition-all"><TikTokIcon className="w-4 h-4" /></a>
               </div>
             </div>
             
             <div>
-              <h5 className="text-label-caps text-primary mb-8 tracking-widest uppercase">Quick Links</h5>
-              <nav className="flex flex-col gap-4 text-on-surface-variant">
-                <Link to="/about" className="hover:text-secondary transition-colors underline-offset-4 hover:underline">Our Story</Link>
-                <Link to="/menu" className="hover:text-secondary transition-colors underline-offset-4 hover:underline">Menus</Link>
-                <Link to="/private-chef" className="hover:text-secondary transition-colors underline-offset-4 hover:underline">Private Dining</Link>
-                <Link to="/weddings" className="hover:text-secondary transition-colors underline-offset-4 hover:underline">Weddings</Link>
-                <a href="#" className="hover:text-secondary transition-colors underline-offset-4 hover:underline">Inquire</a>
+              <h5 className="text-xs font-bold mb-6 tracking-widest uppercase text-secondary">Quick Links</h5>
+              <nav className="flex flex-col gap-3">
+                {[
+                  { to: '/about', label: 'Our Story' },
+                  { to: '/menu', label: 'Menus' },
+                  { to: '/private-chef', label: 'Private Dining' },
+                  { to: '/weddings', label: 'Weddings' },
+                  { to: '/gallery', label: 'Gallery' },
+                ].map(item => (
+                  <Link key={item.to} to={item.to} className="text-white/70 hover:text-secondary text-sm transition-colors">{item.label}</Link>
+                ))}
               </nav>
             </div>
             
             <div>
-              <h5 className="text-label-caps text-primary mb-8 tracking-widest uppercase">Contact</h5>
-              <address className="not-italic text-on-surface-variant flex flex-col gap-4">
-                <span className="flex items-center gap-3"><MapPin className="text-secondary w-5 h-5" /> Westlands, Nairobi, Kenya</span>
-                <span className="flex items-center gap-3"><Phone className="text-secondary w-5 h-5" /> +254 797 453 969</span>
-                <span className="flex items-center gap-3"><Mail className="text-secondary w-5 h-5" /> karreyaggie@gmail.com</span>
+              <h5 className="text-xs font-bold mb-6 tracking-widest uppercase text-secondary">Contact</h5>
+              <address className="not-italic text-white/70 flex flex-col gap-3 text-sm">
+                <span className="flex items-center gap-3"><MapPin className="text-secondary w-4 h-4 flex-shrink-0" /> Westlands, Nairobi, Kenya</span>
+                <a href="tel:+254797453969" className="flex items-center gap-3 hover:text-secondary transition-colors"><Phone className="text-secondary w-4 h-4 flex-shrink-0" /> +254 797 453 969</a>
+                <a href="mailto:karreyaggie@gmail.com" className="flex items-center gap-3 hover:text-secondary transition-colors"><Mail className="text-secondary w-4 h-4 flex-shrink-0" /> karreyaggie@gmail.com</a>
               </address>
             </div>
             
             <div>
-              <h5 className="text-label-caps text-primary mb-8 tracking-widest uppercase">Newsletter</h5>
-              <p className="text-on-surface-variant mb-6">Join our list for exclusive recipes and event updates.</p>
-              <div className="flex border-b border-primary/20 pb-2 backdrop-blur-sm">
-                <input type="email" placeholder="Email address" className="bg-transparent border-none focus:outline-none w-full placeholder:text-on-surface-variant/50" />
-                <button className="text-primary hover:text-secondary transition-colors">→</button>
+              <h5 className="text-xs font-bold mb-6 tracking-widest uppercase text-secondary">Opening Hours</h5>
+              <div className="text-white/70 text-sm flex flex-col gap-2">
+                <p>Monday - Friday: 8AM - 8PM</p>
+                <p>Saturday: 9AM - 6PM</p>
+                <p>Sunday: 10AM - 4PM</p>
               </div>
+              <a href="https://wa.me/254797453969?text=Hello%20Agnes%20Catering%2C%20I%20would%20like%20to%20make%20a%20booking." target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 bg-secondary text-white px-5 py-2.5 rounded-full text-xs font-bold tracking-widest hover:bg-secondary/90 transition-colors shadow-lg">
+                <MessageCircle className="w-3.5 h-3.5" /> BOOK NOW
+              </a>
             </div>
           </div>
           
-          <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-primary/5 text-sm text-on-surface-variant/60">
-            <p>© 2024 Agnes Catering. Modern Heritage Dining.</p>
-            <div className="flex gap-8 mt-4 md:mt-0">
-              <a href="#" className="hover:text-primary">Privacy Policy</a>
-              <a href="#" className="hover:text-primary">Terms of Service</a>
+          <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 text-xs text-white/40">
+            <p>&copy; {new Date().getFullYear()} Agnes Catering. All rights reserved.</p>
+            <div className="flex gap-6 mt-3 md:mt-0">
+              <a href="#" className="hover:text-white/70 transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-white/70 transition-colors">Terms of Service</a>
             </div>
           </div>
         </div>
       </footer>
 
-      {/* Floating Action Buttons */}
-      <div className="fixed bottom-8 right-8 z-[60] hidden md:flex flex-col gap-4 items-center">
+      {/* Desktop FABs */}
+      <div className="fixed bottom-6 right-6 z-[60] hidden md:flex flex-col gap-3 items-end">
         {scrolled && (
           <button 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
-            className="bg-surface text-primary w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform border border-surface-variant group relative"
+            className="bg-surface text-primary w-11 h-11 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform border border-surface-variant"
           >
-            <span className="text-xl">↑</span>
-            <div className="absolute right-16 bg-white/90 px-4 py-2 rounded-xl text-primary text-sm font-semibold whitespace-nowrap shadow-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-              Back to Top
-            </div>
+            ↑
           </button>
         )}
-        <a href="tel:+254797453969" className="bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform group relative">
-          <Phone className="w-6 h-6" />
-          <div className="absolute right-16 bg-white/90 px-4 py-2 rounded-xl text-primary text-sm font-semibold whitespace-nowrap shadow-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-            Call Us
-          </div>
+        <a href="tel:+254797453969" className="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+          <Phone className="w-5 h-5" />
         </a>
         <QuickChat />
       </div>
 
-      {/* Mobile Navigation Shell */}
-      <nav className="md:hidden glass-nav fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] bg-surface/90 rounded-full flex justify-around items-center h-16 z-50 shadow-2xl border border-secondary/20">
-        <Link to="/menu" className="text-on-surface-variant p-4">
-          <Utensils className="w-6 h-6" />
-        </Link>
-        <a href="https://wa.me/254797453969?text=Hello%20Agnes%20Catering%2C%20I%20would%20like%20to%20make%20a%20general%20inquiry." target="_blank" rel="noreferrer" className="bg-secondary-container text-on-secondary-container rounded-full p-4 scale-110 shadow-md">
-          <QrCode className="w-6 h-6" />
-        </a>
-        <a href="tel:+254797453969" className="text-on-surface-variant p-4">
-          <Phone className="w-6 h-6" />
-        </a>
+      {/* Mobile Bottom Nav */}
+      <nav className="md:hidden fixed bottom-0 left-0 w-full bg-surface/95 backdrop-blur-md z-50 border-t border-surface-variant/50 safe-area-bottom">
+        <div className="flex justify-around items-center h-16 px-2">
+          <Link to="/" className={cn("flex flex-col items-center gap-1 py-2 px-3 rounded-xl transition-colors", location.pathname === '/' ? "text-primary" : "text-on-surface-variant")}>
+            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+            <span className="text-[10px] font-medium">Home</span>
+          </Link>
+          <Link to="/menu" className={cn("flex flex-col items-center gap-1 py-2 px-3 rounded-xl transition-colors", location.pathname === '/menu' ? "text-primary" : "text-on-surface-variant")}>
+            <Utensils className="w-5 h-5" />
+            <span className="text-[10px] font-medium">Menu</span>
+          </Link>
+          <a 
+            href="https://wa.me/254797453969?text=Hello%20Agnes%20Catering%2C%20I%20would%20like%20to%20make%20an%20inquiry." 
+            target="_blank" 
+            rel="noreferrer"
+            className="flex flex-col items-center gap-1 -mt-5"
+          >
+            <div className="bg-primary w-14 h-14 rounded-full flex items-center justify-center shadow-xl border-4 border-surface">
+              <MessageCircle className="w-6 h-6 text-white" />
+            </div>
+            <span className="text-[10px] font-medium text-primary">Book</span>
+          </a>
+          <Link to="/gallery" className={cn("flex flex-col items-center gap-1 py-2 px-3 rounded-xl transition-colors", location.pathname === '/gallery' ? "text-primary" : "text-on-surface-variant")}>
+            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+            <span className="text-[10px] font-medium">Gallery</span>
+          </Link>
+          <Link to="/contact" className={cn("flex flex-col items-center gap-1 py-2 px-3 rounded-xl transition-colors", location.pathname === '/contact' ? "text-primary" : "text-on-surface-variant")}>
+            <Phone className="w-5 h-5" />
+            <span className="text-[10px] font-medium">Contact</span>
+          </Link>
+        </div>
       </nav>
+      
+      {/* Spacer for mobile bottom nav */}
+      <div className="md:hidden h-16" />
     </div>
   );
 }
