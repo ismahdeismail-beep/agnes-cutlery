@@ -2,28 +2,17 @@ import React from 'react';
 import { Building2, Heart, UtensilsCrossed, TreePine, GraduationCap, Baby, PartyPopper, Cake, ClipboardList, CheckCircle2, MessageCircle } from 'lucide-react';
 import SEO from '../components/SEO';
 
-import sImg1 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.57 AM.jpeg';
-import sImg2 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.58 AM.jpeg';
-import sImg3 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.59 AM.jpeg';
-import sImg4 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.01 AM.jpeg';
-import sImg5 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.02 AM.jpeg';
-import sImg6 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.04 AM.jpeg';
-import sImg7 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.05 AM.jpeg';
-import sImg8 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.06 AM.jpeg';
-import sImg9 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.06 AM (1).jpeg';
-import sImg10 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.07 AM.jpeg';
-
 const servicesList = [
-  { icon: Building2, title: 'Corporate Catering', desc: 'Impress your clients and nourish your team with refined boardroom menus and executive presentation.', img: sImg1 },
-  { icon: Heart, title: 'Wedding Catering', desc: 'Whether a traditional Ruracio or a modern white wedding, your special day deserves a bespoke culinary journey.', img: sImg2 },
-  { icon: Cake, title: 'Birthday Parties', desc: 'From kids parties to milestone adult birthdays and family gatherings, we create fun, delicious dining experiences.', img: sImg3 },
-  { icon: GraduationCap, title: 'Graduation Ceremonies', desc: 'Celebrate academic achievements with family and friends through premium outdoor setups and extensive buffets.', img: sImg4 },
-  { icon: Baby, title: 'Baby Shower', desc: 'Elegant buffets, coordinated decorations, and sweet desserts to celebrate the upcoming arrival in style.', img: sImg5 },
-  { icon: PartyPopper, title: 'Bridal Shower', desc: 'Sophisticated meals, artisanal cocktails, and delightful desserts for an elegant bridal shower celebration.', img: sImg6 },
-  { icon: UtensilsCrossed, title: 'Private Chef', desc: 'The ultimate luxury: a professional Agnes chef in your own home, delivering restaurant-grade meals.', img: sImg7 },
-  { icon: TreePine, title: 'Outdoor Catering', desc: 'Expertly managed catering for garden parties, picnics, and outdoor events, bringing the kitchen to nature.', img: sImg8 },
-  { icon: UtensilsCrossed, title: 'Buffet Services', desc: 'Extensive spreads featuring traditional Kenyan meals, international cuisine, and interactive live cooking stations.', img: sImg9 },
-  { icon: ClipboardList, title: 'Event Planning Support', desc: 'Comprehensive support including food planning, professional serving staff, equipment, and menu consultation.', img: sImg10 },
+  { icon: Building2, title: 'Corporate Catering', desc: 'Impress your clients and nourish your team with refined boardroom menus and executive presentation.', img: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop' },
+  { icon: Heart, title: 'Wedding Catering', desc: 'Whether a traditional Ruracio or a modern white wedding, your special day deserves a bespoke culinary journey.', img: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2070&auto=format&fit=crop' },
+  { icon: Cake, title: 'Birthday Parties', desc: 'From kids parties to milestone adult birthdays and family gatherings, we create fun, delicious dining experiences.', img: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=2070&auto=format&fit=crop' },
+  { icon: GraduationCap, title: 'Graduation Ceremonies', desc: 'Celebrate academic achievements with family and friends through premium outdoor setups and extensive buffets.', img: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop' },
+  { icon: Baby, title: 'Baby Shower', desc: 'Elegant buffets, coordinated decorations, and sweet desserts to celebrate the upcoming arrival in style.', img: 'https://images.unsplash.com/photo-1471623320832-752e8bbf8413?q=80&w=2070&auto=format&fit=crop' },
+  { icon: PartyPopper, title: 'Bridal Shower', desc: 'Sophisticated meals, artisanal cocktails, and delightful desserts for an elegant bridal shower celebration.', img: 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=2070&auto=format&fit=crop' },
+  { icon: UtensilsCrossed, title: 'Private Chef', desc: 'The ultimate luxury: a professional Agnes chef in your own home, delivering restaurant-grade meals.', img: 'https://images.unsplash.com/photo-1583394293214-22aed6e6afc1?q=80&w=2070&auto=format&fit=crop' },
+  { icon: TreePine, title: 'Outdoor Catering', desc: 'Expertly managed catering for garden parties, picnics, and outdoor events, bringing the kitchen to nature.', img: 'https://images.unsplash.com/photo-1506368249639-73a05d6f6488?q=80&w=2070&auto=format&fit=crop' },
+  { icon: UtensilsCrossed, title: 'Buffet Services', desc: 'Extensive spreads featuring traditional Kenyan meals, international cuisine, and interactive live cooking stations.', img: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?q=80&w=2070&auto=format&fit=crop' },
+  { icon: ClipboardList, title: 'Event Planning Support', desc: 'Comprehensive support including food planning, professional serving staff, equipment, and menu consultation.', img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop' },
 ];
 
 export default function Services() {
@@ -90,7 +79,7 @@ export default function Services() {
           </a>
         </div>
         <div className="md:col-span-5 hidden md:block">
-          <div className="bg-cover bg-center w-full h-[400px] rounded-xl shadow-2xl" style={{ backgroundImage: `url('${sImg1}')` }} />
+          <div className="bg-cover bg-center w-full h-[400px] rounded-xl shadow-2xl" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1555244162-803834f87a41?q=80&w=2070&auto=format&fit=crop')` }} />
         </div>
       </section>
     </div>
