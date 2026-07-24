@@ -111,7 +111,7 @@ const menuData: MenuItem[] = [
     name: 'Matoke',
     description: 'Steamed green bananas in a savory onion and tomato stew — a beloved Eastern Kenya dish.',
     category: 'Traditional Kenyan',
-    image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1563379091339-03b214917e2e?q=80&w=2070&auto=format&fit=crop',
   },
 
   // ─── International ────────────────────────────────────────────────
