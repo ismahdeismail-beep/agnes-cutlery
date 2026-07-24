@@ -59,7 +59,7 @@ const menuData: MenuItem[] = [
     name: 'Ugali & Sukuma Wiki',
     description: 'Classic cornmeal mash served with sauteed collard greens and tender braised beef.',
     category: 'Traditional Kenyan',
-    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?q=80&w=2070&auto=format&fit=crop',
   },
   {
     id: 'tk7',
@@ -103,7 +103,7 @@ const menuData: MenuItem[] = [
     name: 'Mchuzi wa Nyama',
     description: 'Slow-simmered beef curry in a rich, tomato-based sauce with coconut and traditional spices.',
     category: 'Traditional Kenyan',
-    image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1574484284002-952d92456975?q=80&w=2070&auto=format&fit=crop',
     tag: 'Spiced'
   },
   {
@@ -111,7 +111,7 @@ const menuData: MenuItem[] = [
     name: 'Matoke',
     description: 'Steamed green bananas in a savory onion and tomato stew — a beloved Eastern Kenya dish.',
     category: 'Traditional Kenyan',
-    image: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=2070&auto=format&fit=crop',
   },
 
   // ─── International ────────────────────────────────────────────────

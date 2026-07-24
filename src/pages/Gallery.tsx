@@ -64,21 +64,21 @@ const images = [
   { id: 26, src: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=2070&auto=format&fit=crop', category: 'Kenyan Heritage', alt: 'Soft Layered Chapati Stack' },
   { id: 27, src: 'https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=2070&auto=format&fit=crop', category: 'Kenyan Heritage', alt: 'Mukimo & Traditional Stew' },
 
-  // Buffet (Pinterest-quality)
-  { id: 28, src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Gourmet Buffet Carving Station' },
-  { id: 29, src: 'https://images.unsplash.com/photo-1555244162-803834f87a41?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Elegant Catering Spread' },
-  { id: 30, src: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Outdoor Barbecue & Grill Setup' },
-  { id: 31, src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Elegant Fine Dining Presentation' },
-  { id: 32, src: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Premium Buffet Spread' },
-  { id: 33, src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Event Planning & Setup' },
+  // Buffet (Pinterest-quality — inspired by chafing dish buffet spreads)
+  { id: 28, src: 'https://images.unsplash.com/photo-1555244162-803834f87a41?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Elegant Chafing Dish Buffet Line' },
+  { id: 29, src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Premium Fine Dining Presentation' },
+  { id: 30, src: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Grand Buffet Spread with Variety' },
+  { id: 31, src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Gourmet Buffet Carving Station' },
+  { id: 32, src: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Premium Buffet Food Display' },
+  { id: 33, src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Event Catering Setup & Display' },
 
   // Wedding (Pinterest-quality, Kenya-prioritized)
   { id: 34, src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2070&auto=format&fit=crop', category: 'Wedding', alt: 'Elegant Wedding Reception Tables' },
   { id: 35, src: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2070&auto=format&fit=crop', category: 'Wedding', alt: 'Wedding Floral Centerpiece Display' },
-  { id: 36, src: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2070&auto=format&fit=crop', category: 'Wedding', alt: 'Grand Wedding Reception Hall' },
-  { id: 37, src: 'https://images.unsplash.com/photo-1478146059778-26028b07395a?q=80&w=2070&auto=format&fit=crop', category: 'Wedding', alt: 'Ruracio Traditional Ceremony Feast' },
-  { id: 38, src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=2070&auto=format&fit=crop', category: 'Wedding', alt: 'Outdoor Garden Wedding Setup' },
-  { id: 39, src: 'https://images.unsplash.com/photo-1550005809-91ad75fb315f?q=80&w=2070&auto=format&fit=crop', category: 'Wedding', alt: 'Wedding Cake & Dessert Table' },
+  { id: 36, src: 'https://images.unsplash.com/photo-1478146059778-26028b07395a?q=80&w=2070&auto=format&fit=crop', category: 'Wedding', alt: 'Ruracio Traditional Ceremony Feast' },
+  { id: 37, src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=2070&auto=format&fit=crop', category: 'Wedding', alt: 'Outdoor Garden Wedding Setup' },
+  { id: 38, src: 'https://images.unsplash.com/photo-1550005809-91ad75fb315f?q=80&w=2070&auto=format&fit=crop', category: 'Wedding', alt: 'Wedding Cake & Dessert Table' },
+  { id: 39, src: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=2070&auto=format&fit=crop', category: 'Wedding', alt: 'Elegant Wedding Reception Hall' },
 
   // Corporate (Pinterest-quality)
   { id: 40, src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop', category: 'Corporate', alt: 'Corporate Event Dining Room' },
@@ -86,11 +86,12 @@ const images = [
   { id: 42, src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop', category: 'Corporate', alt: 'Modern Conference Room Catering' },
   { id: 43, src: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=2070&auto=format&fit=crop', category: 'Corporate', alt: 'Upscale Corporate Dining Setup' },
 
-  // Private Chef (Pinterest-quality)
-  { id: 44, src: 'https://images.unsplash.com/photo-1583394293214-22aed6e6afc1?q=80&w=2070&auto=format&fit=crop', category: 'Private Chef', alt: 'Professional Chef at Work' },
-  { id: 45, src: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2070&auto=format&fit=crop', category: 'Private Chef', alt: 'Private Chef Plating Fine Dish' },
-  { id: 46, src: 'https://images.unsplash.com/photo-1567620832903-9fc6debc209f?q=80&w=2070&auto=format&fit=crop', category: 'Private Chef', alt: 'Chef Preparing Gourmet Steak' },
-  { id: 47, src: 'https://images.unsplash.com/photo-1581349485608-5a3c6b03c6bc?q=80&w=2070&auto=format&fit=crop', category: 'Private Chef', alt: 'Chef Crafting Signature Dish' },
+  // Private Chef (Pinterest-quality — inspired by private chef plating photos)
+  { id: 44, src: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2070&auto=format&fit=crop', category: 'Private Chef', alt: 'Private Chef Plating Fine Dish' },
+  { id: 45, src: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=2070&auto=format&fit=crop', category: 'Private Chef', alt: 'Chef Crafting Gourmet Plate' },
+  { id: 46, src: 'https://images.unsplash.com/photo-1583394293214-22aed6e6afc1?q=80&w=2070&auto=format&fit=crop', category: 'Private Chef', alt: 'Professional Chef at Work' },
+  { id: 47, src: 'https://images.unsplash.com/photo-1567620832903-9fc6debc209f?q=80&w=2070&auto=format&fit=crop', category: 'Private Chef', alt: 'Chef Preparing Gourmet Steak' },
+  { id: 48, src: 'https://images.unsplash.com/photo-1581349485608-5a3c6b03c6bc?q=80&w=2070&auto=format&fit=crop', category: 'Private Chef', alt: 'Chef Preparing Signature Dish' },
 ];
 
 export default function Gallery() {
