@@ -50,10 +50,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         )}
       >
         <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <Menu className="lg:hidden cursor-pointer w-6 h-6" />
-            <Link to="/" className="text-display-lg-mobile md:text-headline-md tracking-tighter hover:opacity-80 transition-opacity">
-              AGNES
+            <Link to="/" className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-md border border-secondary/40 group-hover:scale-105 transition-transform">
+                <span className="text-secondary font-display-lg font-bold text-lg">A</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xl md:text-2xl font-bold tracking-wider font-display-lg">AGNES</span>
+                <span className="text-[9px] uppercase tracking-[0.2em] opacity-75 font-label-caps">Heritage Dining</span>
+              </div>
             </Link>
           </div>
           <nav className="hidden xl:flex items-center gap-8">
