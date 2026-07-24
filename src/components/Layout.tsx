@@ -24,6 +24,7 @@ const TikTokIcon = ({ className }: { className?: string }) => (
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -37,6 +38,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [scrolled]);
 
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
+
   const isHome = location.pathname === '/';
   const isWeddings = location.pathname === '/weddings';
 
@@ -49,16 +54,22 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           (isHome || isWeddings) && !scrolled ? 'bg-transparent border-transparent text-white' : 'text-primary border-surface-variant'
         )}
       >
-        <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
-          <div className="flex items-center gap-3">
-            <Menu className="lg:hidden cursor-pointer w-6 h-6" />
-            <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-md border border-secondary/40 group-hover:scale-105 transition-transform">
-                <span className="text-secondary font-display-lg font-bold text-lg">A</span>
+        <div className="flex justify-between items-center px-4 md:px-margin-desktop py-2 md:py-4 max-w-container-max mx-auto">
+          <div className="flex items-center gap-2 md:gap-3">
+            <button 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
+              className="lg:hidden p-2 -ml-2 rounded-lg hover:bg-black/5 transition-colors"
+              aria-label="Toggle Menu"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
+            <Link to="/" className="flex items-center gap-2.5 group">
+              <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-primary flex items-center justify-center shadow-md border border-secondary/40 group-hover:scale-105 transition-transform">
+                <span className="text-secondary font-display-lg font-bold text-base md:text-lg">A</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-xl md:text-2xl font-bold tracking-wider font-display-lg">AGNES</span>
-                <span className="text-[9px] uppercase tracking-[0.2em] opacity-75 font-label-caps">Heritage Dining</span>
+                <span className="text-lg md:text-2xl font-bold tracking-wider font-display-lg leading-none">AGNES</span>
+                <span className="text-[8px] md:text-[9px] uppercase tracking-[0.2em] opacity-75 font-label-caps mt-0.5">Heritage Dining</span>
               </div>
             </Link>
           </div>
@@ -71,7 +82,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <Link to="/faq" className={cn("font-label-caps transition-colors text-sm uppercase tracking-wider", location.pathname === '/faq' ? "font-bold" : "hover:text-secondary")}>FAQ</Link>
             <Link to="/contact" className={cn("font-label-caps transition-colors text-sm uppercase tracking-wider", location.pathname === '/contact' ? "font-bold" : "hover:text-secondary")}>Contact</Link>
           </nav>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4">
             <div className={cn(
               "transition-colors",
               (isHome || isWeddings) && !scrolled ? "text-white" : "text-primary"
@@ -79,13 +90,32 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <SearchBar />
             </div>
             <a href="https://wa.me/254797453969?text=Hello%20Agnes%20Catering%2C%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" rel="noreferrer" className={cn(
-              "px-6 py-3 rounded-full transition-all duration-300 hidden md:block font-label-caps tracking-widest text-sm",
+              "px-5 py-2.5 rounded-full transition-all duration-300 hidden md:block font-label-caps tracking-widest text-sm",
               (isHome || isWeddings) && !scrolled ? "bg-white/10 backdrop-blur-md text-white border border-white/20 hover:bg-white hover:text-primary" : "bg-primary text-on-primary hover:bg-primary-container"
             )}>
               BOOK NOW
             </a>
           </div>
         </div>
+
+        {/* Mobile Fullscreen Menu Drawer */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden absolute top-full left-0 w-full bg-surface/98 glass-nav border-b border-surface-variant p-6 shadow-2xl flex flex-col gap-4 animate-in slide-in-from-top duration-300">
+            <Link to="/" className="text-lg font-bold py-2 border-b border-surface-variant/40 text-primary">Home</Link>
+            <Link to="/about" className="text-lg font-bold py-2 border-b border-surface-variant/40 text-primary">About</Link>
+            <Link to="/services" className="text-lg font-bold py-2 border-b border-surface-variant/40 text-primary">Services</Link>
+            <Link to="/menu" className="text-lg font-bold py-2 border-b border-surface-variant/40 text-primary">Menus</Link>
+            <Link to="/gallery" className="text-lg font-bold py-2 border-b border-surface-variant/40 text-primary">Gallery</Link>
+            <Link to="/private-chef" className="text-lg font-bold py-2 border-b border-surface-variant/40 text-primary">Private Dining</Link>
+            <Link to="/weddings" className="text-lg font-bold py-2 border-b border-surface-variant/40 text-primary">Weddings</Link>
+            <Link to="/testimonials" className="text-lg font-bold py-2 border-b border-surface-variant/40 text-primary">Testimonials</Link>
+            <Link to="/faq" className="text-lg font-bold py-2 border-b border-surface-variant/40 text-primary">FAQ</Link>
+            <Link to="/contact" className="text-lg font-bold py-2 text-primary">Contact</Link>
+            <a href="https://wa.me/254797453969?text=Hello%20Agnes%20Catering%2C%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" rel="noreferrer" className="mt-4 bg-primary text-white text-center py-3.5 rounded-xl font-label-caps tracking-widest shadow-lg">
+              BOOK VIA WHATSAPP
+            </a>
+          </div>
+        )}
       </header>
 
       <main className="flex-1">
