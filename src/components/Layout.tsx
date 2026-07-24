@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, Phone, Utensils, MessageCircle, Search, X, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
+import { Menu, Phone, Utensils, MessageCircle, X, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '../lib/utils';
 import QuickChat from './QuickChat';
@@ -58,10 +58,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex items-center gap-2">
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
-              className="lg:hidden p-2 -ml-2 rounded-lg active:bg-black/5 transition-colors"
+              className={cn(
+                "xl:hidden flex items-center justify-center w-11 h-11 rounded-full transition-all active:scale-95",
+                isTransparent 
+                  ? "text-white hover:bg-white/15" 
+                  : "text-primary hover:bg-surface-container"
+              )}
               aria-label="Toggle Menu"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-6 h-6" />}
             </button>
             <Link to="/" className="flex items-center gap-2.5 group">
               <img src="/icon.svg" alt="Agnes Catering" className="w-9 h-9 rounded-xl shadow-md transition-transform group-hover:scale-105" />
@@ -115,10 +120,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </div>
 
         {/* Mobile Drawer */}
-        {mobileMenuOpen && (
-          <>
-            <div className="lg:hidden fixed inset-0 bg-black/40 z-40" onClick={() => setMobileMenuOpen(false)} />
-            <div className="lg:hidden fixed top-0 left-0 w-[280px] h-full bg-surface z-50 shadow-2xl animate-slide-down overflow-y-auto">
+        <div className={cn(
+          "xl:hidden fixed inset-0 bg-black/50 z-40 transition-opacity duration-300",
+          mobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        )} onClick={() => setMobileMenuOpen(false)} />
+        <div className={cn(
+          "xl:hidden fixed top-0 left-0 w-[280px] h-full bg-surface z-[51] shadow-2xl overflow-y-auto transition-transform duration-300 ease-out",
+          mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+        )}>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-8">
                   <Link to="/" className="flex items-center gap-2.5" onClick={() => setMobileMenuOpen(false)}>
@@ -170,8 +179,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </a>
               </div>
             </div>
-          </>
-        )}
       </header>
 
       <main className="flex-1">
