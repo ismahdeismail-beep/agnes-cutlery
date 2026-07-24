@@ -21,7 +21,7 @@ const menuData: MenuItem[] = [
     name: 'Swahili Pilau Heritage',
     description: 'Aromatic Basmati rice cooked with our signature spice blend, served with tender beef or chicken.',
     category: 'Traditional Kenyan',
-    image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=2070&auto=format&fit=crop',
     tag: 'House Favorite'
   },
   {
@@ -36,7 +36,7 @@ const menuData: MenuItem[] = [
     name: 'Mukimo & Stew',
     description: 'Traditional mashed green peas, potatoes, and corn, served with rich beef stew.',
     category: 'Traditional Kenyan',
-    image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=2070&auto=format&fit=crop',
     tag: 'Authentic'
   },
   {
@@ -58,7 +58,7 @@ const menuData: MenuItem[] = [
     name: 'Ugali & Sukuma Wiki',
     description: 'Classic cornmeal mash served with sauteed collard greens and tender braised beef.',
     category: 'Traditional Kenyan',
-    image: 'https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=2070&auto=format&fit=crop',
   },
   {
     id: 'tk7',
@@ -82,7 +82,7 @@ const menuData: MenuItem[] = [
     name: 'Rosemary Roast Chicken',
     description: 'Half-chicken marinated in garlic and rosemary, roasted to golden perfection.',
     category: 'International',
-    image: 'https://images.unsplash.com/photo-1598103442097-8b74d3add518?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?q=80&w=2070&auto=format&fit=crop',
     tag: 'Classic'
   },
   {
@@ -97,7 +97,7 @@ const menuData: MenuItem[] = [
     name: 'Premium BBQ Ribs',
     description: 'Slow-cooked ribs basted in a smoky barbecue sauce, served with artisan salads.',
     category: 'International',
-    image: 'https://images.unsplash.com/photo-1544025162-81111420d4d9?q=80&w=1976&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?q=80&w=1976&auto=format&fit=crop',
   },
   {
     id: 'i4',
@@ -113,7 +113,7 @@ const menuData: MenuItem[] = [
     name: 'Swahili Cardamom Mandazi',
     description: 'Hand-kneaded sweet cardamom fried dough, authentically light and airy.',
     category: 'Breakfast',
-    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1558326567-98ae2405596b?q=80&w=2070&auto=format&fit=crop',
     tag: 'Classic'
   },
   {
@@ -135,7 +135,7 @@ const menuData: MenuItem[] = [
     name: 'Mahamri & Chai',
     description: 'Sweet coconut cardamom doughnuts paired with spiced Kenyan masala tea.',
     category: 'Breakfast',
-    image: 'https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=2070&auto=format&fit=crop',
     tag: 'Swahili Morning'
   },
 
@@ -167,7 +167,7 @@ const menuData: MenuItem[] = [
     name: 'Kashata & Coconut Sweets',
     description: 'Traditional Swahili peanut and coconut confections with cardamom.',
     category: 'Desserts',
-    image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1575377427642-087cf684f29d?q=80&w=2070&auto=format&fit=crop',
     tag: 'Heritage'
   },
 

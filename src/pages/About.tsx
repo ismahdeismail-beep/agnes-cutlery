@@ -25,7 +25,7 @@ export default function About() {
           </div>
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=1977&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1977&auto=format&fit=crop" 
               alt="Agnes Catering Chef" 
               className="rounded-2xl shadow-2xl w-full object-cover aspect-[4/3]" 
             />

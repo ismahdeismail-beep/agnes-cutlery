@@ -5,10 +5,10 @@ import Testimonials from '../components/Testimonials';
 import HeroCarousel from '../components/HeroCarousel';
 import SEO from '../components/SEO';
 
-import featImg1 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.57 AM.jpeg';
-import featImg2 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.08 AM.jpeg';
-import featImg3 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.56 AM.jpeg';
-import featImg4 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM.jpeg';
+import featImg1 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM (1).jpeg';
+import featImg2 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.55 AM (1).jpeg';
+import featImg3 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.55 AM (2).jpeg';
+import featImg4 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.55 AM (3).jpeg';
 
 const whyChooseUs = [
   { icon: Users, title: 'Experienced Team', desc: 'Over a decade of culinary excellence and flawless event execution across Nairobi.' },
@@ -90,7 +90,7 @@ export default function Home() {
         <div className="order-1 lg:order-2">
           <div className="rounded-2xl overflow-hidden shadow-2xl relative">
             <img 
-              src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=1977&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=1977&auto=format&fit=crop" 
               alt="Agnes Catering Chef" 
               className="w-full object-cover aspect-[4/3]" 
             />

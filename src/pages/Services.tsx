@@ -3,15 +3,15 @@ import { Building2, Heart, UtensilsCrossed, TreePine, GraduationCap, Baby, Party
 import SEO from '../components/SEO';
 
 import sImg1 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.57 AM.jpeg';
-import sImg2 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.08 AM.jpeg';
-import sImg3 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.06 AM.jpeg';
-import sImg4 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.07 AM.jpeg';
-import sImg5 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.58 AM.jpeg';
+import sImg2 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.58 AM.jpeg';
+import sImg3 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.59 AM.jpeg';
+import sImg4 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.01 AM.jpeg';
+import sImg5 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.02 AM.jpeg';
 import sImg6 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.04 AM.jpeg';
-import sImg7 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.56 AM.jpeg';
-import sImg8 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM.jpeg';
-import sImg9 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.55 AM (1).jpeg';
-import sImg10 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.05 AM.jpeg';
+import sImg7 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.05 AM.jpeg';
+import sImg8 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.06 AM.jpeg';
+import sImg9 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.06 AM (1).jpeg';
+import sImg10 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.07 AM.jpeg';
 
 const servicesList = [
   { icon: Building2, title: 'Corporate Catering', desc: 'Impress your clients and nourish your team with refined boardroom menus and executive presentation.', img: sImg1 },

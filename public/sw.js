@@ -1,4 +1,4 @@
-const CACHE_NAME = 'agnes-v2';
+const CACHE_NAME = 'agnes-v3';
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();

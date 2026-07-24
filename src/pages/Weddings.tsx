@@ -3,9 +3,9 @@ import { Sparkles, PartyPopper, Gem, Check, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
-import wImg1 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.08 AM.jpeg';
-import wImg2 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM.jpeg';
-import wImg3 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.56 AM.jpeg';
+import wImg1 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM.jpeg';
+import wImg2 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM (2).jpeg';
+import wImg3 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.08 AM.jpeg';
 
 export default function Weddings() {
   return (

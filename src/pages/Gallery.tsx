@@ -54,23 +54,23 @@ const images = [
   { id: 21, src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Gourmet Buffet Carving Station' },
   { id: 22, src: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Outdoor Barbecue & Grill Setup' },
   { id: 23, src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Elegant Fine Dining Presentation' },
-  { id: 24, src: 'https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Tropical Fruit & Dessert Display' },
-  { id: 25, src: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Artisan Pancakes & Brunch Table' },
+  { id: 24, src: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Tropical Fruit & Dessert Display' },
+  { id: 25, src: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929?q=80&w=2070&auto=format&fit=crop', category: 'Buffet', alt: 'Artisan Pancakes & Brunch Table' },
 
   // Wedding
-  { id: 26, src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070&auto=format&fit=crop', category: 'Wedding', alt: 'Elegant Wedding Floral Centerpiece' },
+  { id: 26, src: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2070&auto=format&fit=crop', category: 'Wedding', alt: 'Elegant Wedding Floral Centerpiece' },
   { id: 27, src: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2070&auto=format&fit=crop', category: 'Wedding', alt: 'Grand Wedding Reception Hall' },
   { id: 28, src: 'https://images.unsplash.com/photo-1478146059778-26028b07395a?q=80&w=2069&auto=format&fit=crop', category: 'Wedding', alt: 'Ruracio Traditional Ceremony Feast' },
   { id: 29, src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=2070&auto=format&fit=crop', category: 'Wedding', alt: 'Outdoor Garden Wedding Setup' },
 
   // Corporate
   { id: 30, src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop', category: 'Corporate', alt: 'Corporate Event Dining Room' },
-  { id: 31, src: 'https://images.unsplash.com/photo-1555244162-803834f87a41?q=80&w=2070&auto=format&fit=crop', category: 'Corporate', alt: 'Executive Plated Lunch Service' },
+  { id: 31, src: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2070&auto=format&fit=crop', category: 'Corporate', alt: 'Executive Plated Lunch Service' },
   { id: 32, src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop', category: 'Corporate', alt: 'Modern Conference Room Catering' },
 
   // Private Chef
-  { id: 33, src: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=1977&auto=format&fit=crop', category: 'Private Chef', alt: 'Chef Preparing Gourmet Steak' },
-  { id: 34, src: 'https://images.unsplash.com/photo-1581299894007-aaa50297cf16?q=80&w=2070&auto=format&fit=crop', category: 'Private Chef', alt: 'Professional Female Chef at Work' },
+  { id: 33, src: 'https://images.unsplash.com/photo-1567620832903-9fc6debc209f?q=80&w=1977&auto=format&fit=crop', category: 'Private Chef', alt: 'Chef Preparing Gourmet Steak' },
+  { id: 34, src: 'https://images.unsplash.com/photo-1607631568010-a87245c0daf8?q=80&w=2070&auto=format&fit=crop', category: 'Private Chef', alt: 'Professional Female Chef at Work' },
   { id: 35, src: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2070&auto=format&fit=crop', category: 'Private Chef', alt: 'Private Chef Plating Fine Dish' },
 ];
 

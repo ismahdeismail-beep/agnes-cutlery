@@ -3,10 +3,10 @@ import { BookOpen, Leaf, ConciergeBell, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
-import pcImg1 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.56 AM.jpeg';
-import pcImg2 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM.jpeg';
-import pcImg3 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.08 AM.jpeg';
-import pcImg4 from '../assets/images/WhatsApp Image 2026-07-23 at 11.57.06 AM.jpeg';
+import pcImg1 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.55 AM.jpeg';
+import pcImg2 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.56 AM.jpeg';
+import pcImg3 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM (1).jpeg';
+import pcImg4 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM (2).jpeg';
 
 export default function PrivateChef() {
   return (
@@ -22,7 +22,7 @@ export default function PrivateChef() {
           {/* Female chef image */}
           <div 
             className="w-full h-full bg-cover bg-center transition-transform duration-[10s] hover:scale-105" 
-            style={{ backgroundImage: `url('https://images.unsplash.com/photo-1581299894007-aaa50297cf16?q=80&w=2070&auto=format&fit=crop')` }}
+            style={{ backgroundImage: `url('https://images.unsplash.com/photo-1581349485608-9469926a8e5e?q=80&w=2070&auto=format&fit=crop')` }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent"></div>
         </div>
