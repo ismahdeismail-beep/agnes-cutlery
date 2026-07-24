@@ -3,6 +3,7 @@ import { QrCode, Star, Users, Utensils, Clock, Heart, Award, MessageCircle } fro
 import { Link } from 'react-router-dom';
 import Testimonials from '../components/Testimonials';
 import HeroCarousel from '../components/HeroCarousel';
+import VideoBackground from '../components/VideoBackground';
 import SEO from '../components/SEO';
 
 import featImg1 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM (1).jpeg';
@@ -71,6 +72,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Cooking Video Banner */}
+      <VideoBackground
+        videoSrc="https://cdn.pixabay.com/video/2022/12/18/143420-782373959_large.mp4"
+        posterSrc="https://images.unsplash.com/photo-1555244162-803834f87a41?q=80&w=2070&auto=format&fit=crop"
+        className="h-[40vh] md:h-[50vh]"
+        overlayClassName="bg-primary/40"
+      >
+        <div className="flex items-center justify-center h-full text-center px-4">
+          <div className="max-w-2xl">
+            <span className="text-xs text-secondary uppercase tracking-[0.2em] mb-3 block font-label-caps">Crafted With Passion</span>
+            <h2 className="text-[28px] md:text-[40px] text-white mb-4 font-display-lg leading-tight">
+              Every Dish Tells a Story
+            </h2>
+            <p className="text-sm md:text-base text-white/80 mb-6 max-w-lg mx-auto leading-relaxed">
+              From farm-fresh ingredients to your celebration table, witness the artistry behind every Agnes Catering creation.
+            </p>
+            <a 
+              href="https://wa.me/254797453969?text=Hello%20Agnes%20Catering%2C%20I%20would%20like%20to%20discuss%20menu%20options." 
+              target="_blank" 
+              rel="noreferrer"
+              className="bg-white text-primary px-8 py-3.5 rounded-full text-xs font-bold tracking-widest hover:bg-white/90 transition-all shadow-lg inline-flex items-center gap-2"
+            >
+              <MessageCircle className="w-4 h-4" /> Discuss Your Menu
+            </a>
+          </div>
+        </div>
+      </VideoBackground>
+
       {/* About Section Preview */}
       <section className="py-16 md:py-24 max-w-[1280px] mx-auto px-4 md:px-16 grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
         <div className="order-2 lg:order-1">
@@ -88,13 +117,12 @@ export default function Home() {
         </div>
         
         <div className="order-1 lg:order-2">
-          <div className="rounded-2xl overflow-hidden shadow-2xl relative">
-            <img 
-              src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=1977&auto=format&fit=crop" 
-              alt="Agnes Catering Chef" 
-              className="w-full object-cover aspect-[4/3]" 
-            />
-          </div>
+          <VideoBackground
+            videoSrc="https://cdn.pixabay.com/video/2024/01/18/197205-904265109_large.mp4"
+            posterSrc="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=1977&auto=format&fit=crop"
+            className="rounded-2xl overflow-hidden aspect-[4/3]"
+            overlayClassName="bg-primary/10"
+          />
         </div>
       </section>
 

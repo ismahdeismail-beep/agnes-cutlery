@@ -2,6 +2,7 @@ import React from 'react';
 import { BookOpen, Leaf, ConciergeBell, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import VideoBackground from '../components/VideoBackground';
 
 import pcImg1 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.55 AM.jpeg';
 import pcImg2 from '../assets/images/WhatsApp Image 2026-07-23 at 11.56.56 AM.jpeg';
@@ -16,16 +17,13 @@ export default function PrivateChef() {
         description="Experience the luxury of a private chef in Nairobi. Bespoke fine dining curated for the intimacy of your home by Agnes Catering."
       />
       
-      {/* Hero Section — with lady/chef photo */}
-      <section className="relative min-h-[60vh] md:min-h-[795px] flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          {/* Female chef image */}
-          <div 
-            className="w-full h-full bg-cover bg-center transition-transform duration-[10s] hover:scale-105" 
-            style={{ backgroundImage: `url('https://images.unsplash.com/photo-1581349485608-9469926a8e5e?q=80&w=2070&auto=format&fit=crop')` }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent"></div>
-        </div>
+      {/* Hero Section — Autoplay muted cooking video */}
+      <VideoBackground
+        videoSrc="https://cdn.pixabay.com/video/2024/01/18/197205-904265109_large.mp4"
+        posterSrc="https://images.unsplash.com/photo-1581349485608-9469926a8e5e?q=80&w=2070&auto=format&fit=crop"
+        className="min-h-[60vh] md:min-h-[795px]"
+        overlayClassName="bg-gradient-to-r from-primary/90 via-primary/60 to-transparent"
+      >
         
         <div className="relative z-10 max-w-[1280px] mx-auto px-4 md:px-16 w-full">
           <div className="max-w-2xl text-white">
@@ -51,7 +49,7 @@ export default function PrivateChef() {
             </div>
           </div>
         </div>
-      </section>
+      </VideoBackground>
 
       {/* The Experience */}
       <section className="py-16 md:py-24 bg-surface">

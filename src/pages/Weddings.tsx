@@ -2,6 +2,7 @@ import React from 'react';
 import { Sparkles, PartyPopper, Gem, Check, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import VideoBackground from '../components/VideoBackground';
 
 import wImg1 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM.jpeg';
 import wImg2 from '../assets/images/WhatsApp Image 2026-07-23 at 11.52.54 AM (2).jpeg';
@@ -15,13 +16,13 @@ export default function Weddings() {
         description="Exquisite wedding catering services in Nairobi. From intimate heritage ceremonies to grand celebrations, Agnes Catering offers bespoke culinary experiences."
       />
       
-      {/* Hero Section */}
-      <header className="relative min-h-[60vh] md:min-h-[795px] flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="w-full h-full bg-cover bg-center scale-105 transition-transform duration-[10s] hover:scale-100" style={{ backgroundImage: `url('${wImg1}')` }} />
-          <div className="absolute inset-0 bg-primary/40 mix-blend-multiply"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background"></div>
-        </div>
+      {/* Hero Section — Autoplay muted video background */}
+      <VideoBackground
+        videoSrc="https://videos.pexels.com/video-files/28572601/12423708_1920_1080_25fps.mp4"
+        posterSrc="https://images.pexels.com/videos/28572601/pexels-photo-28572601.jpeg?auto=compress&w=1260&h=750&dpr=1"
+        className="min-h-[60vh] md:min-h-[795px]"
+        overlayClassName="bg-gradient-to-r from-primary/80 via-primary/50 to-primary/20"
+      >
         
         <div className="relative z-10 max-w-[1280px] mx-auto px-4 md:px-16 w-full text-white">
           <span className="text-xs tracking-widest uppercase mb-4 block font-label-caps opacity-80">Established 1984</span>
@@ -37,7 +38,7 @@ export default function Weddings() {
             </Link>
           </div>
         </div>
-      </header>
+      </VideoBackground>
 
       {/* Wedding Collections */}
       <section className="py-16 md:py-24 bg-surface" id="collections">
